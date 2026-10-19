@@ -366,7 +366,7 @@ ru: {
   componentDidMount() {
     let s = null;
     try { s = localStorage.getItem("nk-lang"); } catch (e) {}
-    if (!(s && this.T[s])) { const n = (navigator.language || "uk").slice(0, 2).toLowerCase(); s = this.T[n] ? n : "uk"; }
+    if (!(s && this.T[s])) { s = "uk"; }
     this.setState({ lang: s });
     document.title = this.titles[s];
   }
