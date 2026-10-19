@@ -396,7 +396,14 @@ ru: {
         }[L];
         const st = f.querySelector(".nk-form-status"); const btn = f.querySelector("button[type=submit]");
         const show = s => { if (st) st.textContent = s; };
-        const body = new URLSearchParams({ name: get("name"), contact: get("contact"), lang: sel("lang"), service: sel("service"), date: get("date"), city: get("city"), msg: get("msg"), website: get("website"), siteLang: L });
+        const need = { en: "Please enter your name.", uk: "Вкажіть ваше імʼя.", ru: "Укажите ваше имя." }[L];
+        const badPhone = { en: "Please enter a valid US phone number, 10 digits: XXX XXX XXXX.", uk: "Вкажіть дійсний американський номер телефону, 10 цифр: XXX XXX XXXX.", ru: "Укажите действительный американский номер телефона, 10 цифр: XXX XXX XXXX." }[L];
+        let ph = get("contact").replace(/\D/g, ""); if (ph.length === 11 && ph[0] === "1") ph = ph.slice(1);
+        const okPhone = /^[2-9]\d{2}[2-9]\d{6}$/.test(ph) && !/^[2-9]11/.test(ph) && ph.slice(3, 6) !== "555" && !/^.{3}[2-9]11/.test(ph) && new Set(ph).size >= 3 && !"01234567890".includes(ph) && !"09876543210".includes(ph);
+        if (!get("name").trim()) { show(need); return; }
+        if (!okPhone) { show(badPhone); return; }
+        if (get("website") || performance.now() < 5000) { show(M.ok); f.reset(); return; }
+        const body = new URLSearchParams({ name: get("name"), contact: ph, lang: sel("lang"), service: sel("service"), date: get("date"), city: get("city"), msg: get("msg"), website: get("website"), siteLang: L });
         show(M.sending); if (btn) btn.disabled = true;
         fetch("https://script.google.com/macros/s/AKfycbzrMc6yscIms0jP-wO2BRToQDEAH70RBJKOJr4c4y7KDTHq4xrcLaS7gqv5_k7hoB26/exec", { method: "POST", mode: "no-cors", body })
           .then(() => { show(M.ok); f.reset(); })
