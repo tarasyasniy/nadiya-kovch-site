@@ -241,8 +241,8 @@ a:hover{color:var(--color-accent-600)}
     <p class="nk-sub" style="margin-inline:auto">{{ t.x_sub }}</p>
     <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px">
       <div style="display:grid;justify-items:center;gap:6px">
-        <span style="font-size:16px;font-weight:600;color:var(--color-neutral-700)">{{ t.x_call }}</span>
-        <a href="tel:{{ phoneHref }}" style="font-family:var(--font-body);font-size:36px;font-weight:700;letter-spacing:.03em;color:var(--color-text);text-decoration:none">{{ phone }}</a>
+        <button type="button" onClick="{{ callClick }}" class="btn btn-primary" style="cursor:pointer;font:inherit;font-size:20px;padding:16px 40px">{{ t.x_call }}</button>
+        <span class="nk-phone-out" style="font-family:var(--font-body);font-size:32px;font-weight:700;letter-spacing:.03em;min-height:40px"></span>
       </div>
     </div>
   </div>
@@ -398,7 +398,10 @@ ru: {
     };
     const css = c => (l === c ? "background:var(--color-accent-700);color:#fff" : "background:transparent;color:var(--color-neutral-700)");
     return {
-      t: this.T[l], yr: new Date().getFullYear(), phone: "503 756 3077", phoneHref: "+15037563077",
+      t: this.T[l], yr: new Date().getFullYear(), callClick: e => { const d = ["3077", "756", "503"].reverse(); const n = d.join(""); const root = e.target.closest("div"); const out = root.querySelector(".nk-phone-out");
+        const touch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+        if (touch) { window.location.href = "tel:+1" + n; }
+        else if (out && !out.firstChild) { const a = document.createElement("a"); a.href = "tel:+1" + n; a.textContent = d[0] + " " + d[1] + " " + d[2]; a.style.color = "inherit"; a.style.textDecoration = "none"; out.appendChild(a); } },
       isEn: String(l === "en"), isUk: String(l === "uk"), isRu: String(l === "ru"),
       enCss: css("en"), ukCss: css("uk"), ruCss: css("ru"),
       setEn: () => setLang("en"), setUk: () => setLang("uk"), setRu: () => setLang("ru"),
@@ -406,9 +409,9 @@ ru: {
         const get = n => (f.elements[n] ? f.elements[n].value : "");
         const sel = n => (f.elements[n] ? f.elements[n].options[f.elements[n].selectedIndex].text : "");
         const M = {
-          en: { sending: "Sending…", ok: "Thank you. Your request was sent. I will reply as soon as I can.", err: "Something went wrong. Please try again or call 503 756 3077." },
-          uk: { sending: "Надсилаю…", ok: "Дякую. Запит надіслано. Я відповім якнайшвидше.", err: "Щось пішло не так. Спробуйте ще раз або зателефонуйте 503 756 3077." },
-          ru: { sending: "Отправляю…", ok: "Спасибо. Запрос отправлен. Я отвечу как можно скорее.", err: "Что-то пошло не так. Попробуйте ещё раз или позвоните 503 756 3077." }
+          en: { sending: "Sending…", ok: "Thank you. Your request was sent. I will reply as soon as I can.", err: "Something went wrong. Please try again or use the Call button." },
+          uk: { sending: "Надсилаю…", ok: "Дякую. Запит надіслано. Я відповім якнайшвидше.", err: "Щось пішло не так. Спробуйте ще раз або натисніть «Подзвонити»." },
+          ru: { sending: "Отправляю…", ok: "Спасибо. Запрос отправлен. Я отвечу как можно скорее.", err: "Что-то пошло не так. Попробуйте ещё раз или нажмите «Позвонить»." }
         }[L];
         const st = f.querySelector(".nk-form-status"); const btn = f.querySelector("button[type=submit]");
         const show = s => { if (st) st.textContent = s; };
