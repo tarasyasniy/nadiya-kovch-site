@@ -199,7 +199,8 @@ a:hover{color:var(--color-accent-600)}
       <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_date }}</span><input class="nk-input" name="date" type="date"></label>
       <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_city }}</span><input class="nk-input" name="city"></label>
       <label class="nk-label" style="grid-column:1/-1"><span style="color:var(--color-neutral-700)">{{ t.o_msg }}</span><textarea class="nk-input" name="msg" rows="4" style="resize:vertical"></textarea></label>
-      <div style="grid-column:1/-1"><button type="submit" class="btn btn-primary" style="cursor:pointer;font:inherit">{{ t.o_send }}</button></div>
+      <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <div style="grid-column:1/-1"><button type="submit" class="btn btn-primary" style="cursor:pointer;font:inherit">{{ t.o_send }}</button><p class="nk-form-status" role="status" style="margin:12px 0 0;color:var(--color-neutral-700)"></p></div>
     </form>
   </div>
 </section>
@@ -245,7 +246,7 @@ class Component extends DCLogic {
 en: { nav_services: "Services", nav_how: "How it works", nav_details: "Details", nav_reviews: "Reviews", nav_contact: "Contact",
   p_title: "Your privacy", p1t: "Documents stay private", p1d: "Your papers are never shared with anyone else.", p2t: "Confidential conversations", p2d: "Everything I hear and read stays between us.",
   v_title: "A short hello", v_sub: "A short message from me.",
-  o_title: "Send a request", o_sub: "Fill in the short form and I will reply as soon as I can.", o_name: "Your name", o_contact: "Phone or email", o_lang: "Languages", o_service: "Service", o_date: "Date needed", o_city: "City", o_msg: "Tell me more, if you like", o_send: "Send request", o_note: "The form will work once my email is added.",
+  o_title: "Send a request", o_sub: "Fill in the short form and I will reply as soon as I can.", o_name: "Your name", o_contact: "Phone or email", o_lang: "Languages", o_service: "Service", o_date: "Date needed", o_city: "City", o_msg: "Tell me more, if you like", o_send: "Send request",
   l1: "English and Ukrainian", l2: "English and Russian", l3: "Ukrainian and Russian", sv1: "In person", sv2: "By phone", sv3: "By video", sv4: "Written translation", sv5: "USCIS interview", sv6: "Other",
   name: "Nadiya Kovch", role: "Interpreter and translator",
   lead: "Document translation and interpreting for immigration cases, benefits offices and everyday paperwork. English, Ukrainian and Russian.",
@@ -285,7 +286,7 @@ uk: {
   nav_services: "Послуги", nav_how: "Як це працює", nav_details: "Деталі", nav_reviews: "Відгуки", nav_contact: "Контакти",
   p_title: "Ваша конфіденційність", p1t: "Документи лишаються приватними", p1d: "Ваші папери нікому не передаються.", p2t: "Конфіденційні розмови", p2d: "Усе, що я чую і читаю, лишається між нами.",
   v_title: "Коротке привітання", v_sub: "Коротке звернення від мене.",
-  o_title: "Залишити запит", o_sub: "Заповніть коротку форму, і я відповім якнайшвидше.", o_name: "Ваше імʼя", o_contact: "Телефон або пошта", o_lang: "Мови", o_service: "Послуга", o_date: "Потрібна дата", o_city: "Місто", o_msg: "Розкажіть детальніше, якщо хочете", o_send: "Надіслати запит", o_note: "Форма запрацює, щойно буде додано пошту.",
+  o_title: "Залишити запит", o_sub: "Заповніть коротку форму, і я відповім якнайшвидше.", o_name: "Ваше імʼя", o_contact: "Телефон або пошта", o_lang: "Мови", o_service: "Послуга", o_date: "Потрібна дата", o_city: "Місто", o_msg: "Розкажіть детальніше, якщо хочете", o_send: "Надіслати запит",
   l1: "Англійська і українська", l2: "Англійська і російська", l3: "Українська і російська", sv1: "Особисто", sv2: "По телефону", sv3: "По відео", sv4: "Письмовий переклад", sv5: "Співбесіда USCIS", sv6: "Інше",
   name: "Nadiya Kovch", role: "Перекладачка",
   lead: "Переклад документів і усний переклад для імміграційних справ, установ допомоги та повсякденних паперів. Англійська, українська та російська.",
@@ -325,7 +326,7 @@ ru: {
   nav_services: "Услуги", nav_how: "Как это работает", nav_details: "Детали", nav_reviews: "Отзывы", nav_contact: "Контакты",
   p_title: "Ваша конфиденциальность", p1t: "Документы остаются приватными", p1d: "Ваши бумаги никому не передаются.", p2t: "Конфиденциальные разговоры", p2d: "Всё, что я слышу и читаю, остаётся между нами.",
   v_title: "Короткое приветствие", v_sub: "Короткое обращение от меня.",
-  o_title: "Оставить запрос", o_sub: "Заполните короткую форму, и я отвечу как можно скорее.", o_name: "Ваше имя", o_contact: "Телефон или почта", o_lang: "Языки", o_service: "Услуга", o_date: "Нужная дата", o_city: "Город", o_msg: "Расскажите подробнее, если хотите", o_send: "Отправить запрос", o_note: "Форма заработает, как только будет добавлена почта.",
+  o_title: "Оставить запрос", o_sub: "Заполните короткую форму, и я отвечу как можно скорее.", o_name: "Ваше имя", o_contact: "Телефон или почта", o_lang: "Языки", o_service: "Услуга", o_date: "Нужная дата", o_city: "Город", o_msg: "Расскажите подробнее, если хотите", o_send: "Отправить запрос",
   l1: "Английский и украинский", l2: "Английский и русский", l3: "Украинский и русский", sv1: "Лично", sv2: "По телефону", sv3: "По видео", sv4: "Письменный перевод", sv5: "Собеседование USCIS", sv6: "Другое",
   name: "Nadiya Kovch", role: "Переводчица",
   lead: "Перевод документов и устный перевод для иммиграционных дел, учреждений помощи и повседневных бумаг. Английский, украинский и русский.",
@@ -382,13 +383,22 @@ ru: {
       isEn: String(l === "en"), isUk: String(l === "uk"), isRu: String(l === "ru"),
       enCss: css("en"), ukCss: css("uk"), ruCss: css("ru"),
       setEn: () => setLang("en"), setUk: () => setLang("uk"), setRu: () => setLang("ru"),
-      submitForm: e => { e.preventDefault(); const f = e.target; const L = this.state.lang; const T = this.T[L];
+      submitForm: e => { e.preventDefault(); const f = e.target; const L = this.state.lang;
         const get = n => (f.elements[n] ? f.elements[n].value : "");
         const sel = n => (f.elements[n] ? f.elements[n].options[f.elements[n].selectedIndex].text : "");
-        const subj = { en: "Request", uk: "Запит", ru: "Запрос" }[L];
-        const lines = [T.o_name + ": " + get("name"), T.o_contact + ": " + get("contact"), T.o_lang + ": " + sel("lang"), T.o_service + ": " + sel("service"), T.o_date + ": " + get("date"), T.o_city + ": " + get("city"), "", get("msg")];
-        window.location.href = "mailto:nadiya.kovch2025@gmail.com?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(lines.join("\n")); },
-      noteHidden: !this.state.sent,
+        const M = {
+          en: { sending: "Sending…", ok: "Thank you. Your request was sent. I will reply as soon as I can.", err: "Something went wrong. Please try again or call 503 756 3077." },
+          uk: { sending: "Надсилаю…", ok: "Дякую. Запит надіслано. Я відповім якнайшвидше.", err: "Щось пішло не так. Спробуйте ще раз або зателефонуйте 503 756 3077." },
+          ru: { sending: "Отправляю…", ok: "Спасибо. Запрос отправлен. Я отвечу как можно скорее.", err: "Что-то пошло не так. Попробуйте ещё раз или позвоните 503 756 3077." }
+        }[L];
+        const st = f.querySelector(".nk-form-status"); const btn = f.querySelector("button[type=submit]");
+        const show = s => { if (st) st.textContent = s; };
+        const body = new URLSearchParams({ name: get("name"), contact: get("contact"), lang: sel("lang"), service: sel("service"), date: get("date"), city: get("city"), msg: get("msg"), website: get("website"), siteLang: L });
+        show(M.sending); if (btn) btn.disabled = true;
+        fetch("https://script.google.com/macros/s/AKfycbzrMc6yscIms0jP-wO2BRToQDEAH70RBJKOJr4c4y7KDTHq4xrcLaS7gqv5_k7hoB26/exec", { method: "POST", mode: "no-cors", body })
+          .then(() => { show(M.ok); f.reset(); })
+          .catch(() => { show(M.err); })
+          .finally(() => { if (btn) btn.disabled = false; }); },
       helloHidden: !this.state.videoReady,
       onVideoReady: () => this.setState({ videoReady: true })
     };
