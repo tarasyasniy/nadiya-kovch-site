@@ -17,6 +17,13 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Nadiya Kovch, Interpreter and Translator", "url": "https://nadiya-ye.com/", "image": "https://nadiya-ye.com/assets/nadiya-logo.jpg", "description": "Nadiya Kovch is an interpreter and translator in Portland, OR and Vancouver, WA. English, Ukrainian and Russian. Immigration paperwork, USCIS interview support, medical and social services.", "areaServed": [{"@type": "City", "name": "Portland, OR"}, {"@type": "City", "name": "Vancouver, WA"}], "knowsLanguage": ["en", "uk", "ru"], "founder": {"@type": "Person", "name": "Nadiya Kovch", "jobTitle": "Interpreter and Translator"}, "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interpreting in person, by phone and by video"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Written translation"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "USCIS interview support"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Immigration paperwork and USCIS forms"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Welfare and social services support"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medical and social services interpreting"}}], "inLanguage": ["en", "uk", "ru"]}</script>
 </head>
 <body>
+<script>
+document.addEventListener("focusout", function (e) {
+  var t = e.target; if (!t || t.name !== "contact") return;
+  var d = String(t.value).replace(/\D/g, ""); if (d.length === 11 && d[0] === "1") d = d.slice(1);
+  if (d.length === 10) t.value = d.slice(0, 3) + " " + d.slice(3, 6) + " " + d.slice(6);
+});
+</script>
 <noscript><main><h1>Nadiya Kovch, Interpreter and Translator</h1>
 <p>Nadiya Kovch is an interpreter and translator in Portland, OR and Vancouver, WA. English, Ukrainian and Russian. Immigration paperwork, USCIS interview support, medical and social services.</p>
 <p>Nadiya Kovch, перекладачка в Портленді та Венкувері. Англійська, українська, російська. Імміграційні документи, співбесіди USCIS, медичні та соціальні послуги.</p>
@@ -219,7 +226,7 @@ a:hover{color:var(--color-accent-600)}
     <p class="nk-sub">{{ t.o_sub }}</p>
     <form onSubmit="{{ submitForm }}" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));max-width:680px">
       <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_name }}</span><input class="nk-input" name="name" required autocomplete="name"></label>
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_contact }}</span><input class="nk-input" name="contact" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_contact }}</span><input class="nk-input" name="contact" type="tel" inputmode="tel" autocomplete="tel" placeholder="XXX XXX XXXX" required></label>
       <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_lang }}</span>
         <select class="nk-input" name="lang"><option>{{ t.l1 }}</option><option>{{ t.l2 }}</option><option>{{ t.l3 }}</option></select></label>
       <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_service }}</span>
