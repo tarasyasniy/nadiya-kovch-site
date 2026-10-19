@@ -200,7 +200,6 @@ a:hover{color:var(--color-accent-600)}
       <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_city }}</span><input class="nk-input" name="city"></label>
       <label class="nk-label" style="grid-column:1/-1"><span style="color:var(--color-neutral-700)">{{ t.o_msg }}</span><textarea class="nk-input" name="msg" rows="4" style="resize:vertical"></textarea></label>
       <div style="grid-column:1/-1"><button type="submit" class="btn btn-primary" style="cursor:pointer;font:inherit">{{ t.o_send }}</button></div>
-      <p hidden="{{ noteHidden }}" style="grid-column:1/-1;margin:0;font-weight:600;color:var(--color-neutral-700)">{{ t.o_note }}</p>
     </form>
   </div>
 </section>
@@ -383,7 +382,12 @@ ru: {
       isEn: String(l === "en"), isUk: String(l === "uk"), isRu: String(l === "ru"),
       enCss: css("en"), ukCss: css("uk"), ruCss: css("ru"),
       setEn: () => setLang("en"), setUk: () => setLang("uk"), setRu: () => setLang("ru"),
-      submitForm: e => { e.preventDefault(); this.setState({ sent: true }); },
+      submitForm: e => { e.preventDefault(); const f = e.target; const L = this.state.lang; const T = this.T[L];
+        const get = n => (f.elements[n] ? f.elements[n].value : "");
+        const sel = n => (f.elements[n] ? f.elements[n].options[f.elements[n].selectedIndex].text : "");
+        const subj = { en: "Request", uk: "Запит", ru: "Запрос" }[L];
+        const lines = [T.o_name + ": " + get("name"), T.o_contact + ": " + get("contact"), T.o_lang + ": " + sel("lang"), T.o_service + ": " + sel("service"), T.o_date + ": " + get("date"), T.o_city + ": " + get("city"), "", get("msg")];
+        window.location.href = "mailto:nadiya.kovch2025@gmail.com?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(lines.join("\n")); },
       noteHidden: !this.state.sent,
       helloHidden: !this.state.videoReady,
       onVideoReady: () => this.setState({ videoReady: true })
