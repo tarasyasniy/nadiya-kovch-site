@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/organic-225c2229-6042-4bd7-bb12-7956ac4fc21e/styles.css">
+<script src="ds/organic-225c2229-6042-4bd7-bb12-7956ac4fc21e/_ds_bundle.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="light">
+<style>
+html:root{--color-bg:#FFFFFF;--color-text:#14304F;--color-accent:#2A74B8;--color-accent-100:#EAF4FB;--color-accent-600:#215F98;--color-accent-700:#1A4F82;--color-accent-2-100:#DCEEF8;--color-neutral-100:#F3F8FC;--color-neutral-200:#DCE7F1;--color-neutral-300:#C3D4E4;--color-neutral-700:#44607D;--font-heading:"Cormorant Garamond",Georgia,serif;--font-body:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--color-accent-700)}
+a:hover{color:var(--color-accent-600)}
+.nk-nav{display:none}
+@media(min-width:860px){.nk-nav{display:flex}}
+.nk-nav a{text-decoration:none;color:var(--color-neutral-700);font-weight:600}
+.nk-nav a:hover{color:var(--color-accent-700)}
+.nk-wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.nk-h2{font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,4.6vw,44px);line-height:1.1;letter-spacing:-.01em;margin:0 0 12px}
+.nk-sub{color:var(--color-neutral-700);max-width:38em;margin:0 0 40px}
+.nk-sec{padding:80px 0}
+.nk-alt{background:var(--color-neutral-100)}
+.nk-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.nk-card{border-radius:var(--radius-lg);padding:30px}
+.nk-card h3{font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.2;margin:0 0 6px}
+.nk-card p{margin:0 0 16px;color:var(--color-neutral-700)}
+.nk-card ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.nk-card li{display:flex;gap:10px;font-weight:500}
+.nk-dot{flex:none;width:8px;height:8px;border-radius:50%;background:#F7B928;margin-top:9px}
+.nk-num{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#F7B928;color:#14304F;font-weight:700;font-size:18px}
+.nk-fact{background:var(--color-neutral-100);border-radius:20px;padding:24px}
+.nk-alt .nk-fact{background:var(--color-bg)}
+.nk-fact h3{font-size:17px;margin:0 0 6px}
+.nk-fact p{margin:0;color:var(--color-neutral-700);font-size:15.5px}
+.nk-input{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--color-neutral-300);border-radius:12px;background:var(--color-bg);color:var(--color-text)}
+.nk-label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.nk-details{border-bottom:1px solid var(--color-neutral-200);padding:20px 0}
+.nk-details:first-of-type{border-top:1px solid var(--color-neutral-200)}
+.nk-details summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.nk-details summary::-webkit-details-marker{display:none}
+.nk-details p{margin:12px 0 0;color:var(--color-neutral-700);max-width:42em}
+</style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+<header style="position:sticky;top:0;z-index:10;background:var(--color-bg);border-bottom:1px solid var(--color-neutral-200)">
+  <div class="nk-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;height:100px">
+    <a href="#top" style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;padding:0 14px"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:84px;width:auto;display:block"></a>
+    <nav class="nk-nav" aria-label="Main" style="gap:26px;font-size:15px">
+      <a href="#services">{{ t.nav_services }}</a>
+      <a href="#how">{{ t.nav_how }}</a>
+      <a href="#details">{{ t.nav_details }}</a>
+      <a href="#reviews">{{ t.nav_reviews }}</a>
+      <a href="#contact">{{ t.nav_contact }}</a>
+    </nav>
+    <div role="group" aria-label="Language" style="display:flex;gap:4px;background:var(--color-accent-2-100);border-radius:999px;padding:4px">
+      <button type="button" onClick="{{ setEn }}" aria-pressed="{{ isEn }}" style="cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--font-body);{{ enCss }}">EN</button>
+      <button type="button" onClick="{{ setUk }}" aria-pressed="{{ isUk }}" style="cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--font-body);{{ ukCss }}">UA</button>
+      <button type="button" onClick="{{ setRu }}" aria-pressed="{{ isRu }}" style="cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--font-body);{{ ruCss }}">RU</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section style="padding:64px 0 56px">
+  <div class="nk-wrap" style="display:grid;gap:44px;align-items:center;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+    <div>
+      <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(52px,9vw,96px);line-height:1;letter-spacing:-.01em;margin:0 0 16px">{{ t.name }}</h1>
+      <p style="font-size:clamp(19px,2.4vw,23px);font-weight:600;color:var(--color-accent-700);margin:0 0 16px">{{ t.role }}</p>
+      <p style="max-width:34em;color:var(--color-neutral-700);font-size:18px;margin:0 0 28px">{{ t.lead }}</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-primary" href="#contact">{{ t.cta }}</a>
+        <a class="btn btn-secondary" href="#services">{{ t.cta2 }}</a>
+      </div>
+    </div>
+    <div aria-hidden="true" style="background:var(--color-accent-100);border-radius:28px;padding:26px;display:grid;gap:12px;max-width:440px;justify-self:center;width:100%">
+      <div style="background:var(--color-bg);border-radius:18px;border-bottom-left-radius:5px;padding:14px 18px;font-weight:500;font-size:17px;line-height:1.35;max-width:90%;justify-self:start"><small style="display:block;font-size:12px;font-weight:600;color:var(--color-neutral-700);margin-bottom:2px">English</small>Please bring your passport to the interview.</div>
+      <div style="background:var(--color-accent-2-100);border-radius:18px;border-bottom-right-radius:5px;padding:14px 18px;font-weight:500;font-size:17px;line-height:1.35;max-width:90%;justify-self:end"><small style="display:block;font-size:12px;font-weight:600;color:var(--color-neutral-700);margin-bottom:2px">Українська</small>Будь ласка, візьміть паспорт на співбесіду.</div>
+      <div style="background:var(--color-bg);border-radius:18px;border-bottom-left-radius:5px;padding:14px 18px;font-weight:500;font-size:17px;line-height:1.35;max-width:90%;justify-self:start"><small style="display:block;font-size:12px;font-weight:600;color:var(--color-neutral-700);margin-bottom:2px">Русский</small>Пожалуйста, возьмите паспорт на собеседование.</div>
+    </div>
+  </div>
+  <div class="nk-wrap" style="margin-top:48px;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.4"><i style="flex:none;width:32px;height:32px;border-radius:50%;background:#F7B928;display:grid;place-items:center;font-style:normal;font-weight:700;color:#14304F;font-size:15px">15</i><div><b style="display:block;font-size:16px">{{ t.t1t }}</b><span style="color:var(--color-neutral-700)">{{ t.t1d }}</span></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.4"><i style="flex:none;width:32px;height:32px;border-radius:50%;background:#F7B928;display:grid;place-items:center;font-style:normal;font-weight:700;color:#14304F;font-size:15px">3</i><div><b style="display:block;font-size:16px">{{ t.t2t }}</b><span style="color:var(--color-neutral-700)">{{ t.t2d }}</span></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.4"><i style="flex:none;width:32px;height:32px;border-radius:50%;background:#F7B928;display:grid;place-items:center;font-style:normal;font-weight:700;color:#14304F;font-size:15px">✓</i><div><b style="display:block;font-size:16px">{{ t.t3t }}</b><span style="color:var(--color-neutral-700)">{{ t.t3d }}</span></div></div>
+    <div style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.4"><i style="flex:none;width:32px;height:32px;border-radius:50%;background:#F7B928;display:grid;place-items:center;font-style:normal;font-weight:700;color:#14304F;font-size:15px">★</i><div><b style="display:block;font-size:16px">{{ t.t4t }}</b><span style="color:var(--color-neutral-700)">{{ t.t4d }}</span></div></div>
+  </div>
+</section>
+
+<section id="services" class="nk-sec" style="padding-top:0">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.s_title }}</h2>
+    <p class="nk-sub">{{ t.s_sub }}</p>
+    <div class="nk-grid">
+      <div class="nk-card" style="background:var(--color-accent-100)">
+        <h3>{{ t.c1t }}</h3><p>{{ t.c1d }}</p>
+        <ul><li><span class="nk-dot"></span>{{ t.c1a }}</li><li><span class="nk-dot"></span>{{ t.c1b }}</li><li><span class="nk-dot"></span>{{ t.c1c }}</li></ul>
+      </div>
+      <div class="nk-card" style="background:var(--color-accent-2-100)">
+        <h3>{{ t.c2t }}</h3><p>{{ t.c2d }}</p>
+        <ul><li><span class="nk-dot"></span>{{ t.c2a }}</li><li><span class="nk-dot"></span>{{ t.c2b }}</li><li><span class="nk-dot"></span>{{ t.c2c }}</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="nk-sec nk-alt">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.h_title }}</h2>
+    <p class="nk-sub">{{ t.h_sub }}</p>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+      <li style="display:flex;gap:16px"><span class="nk-num">1</span><div><strong style="display:block;font-size:19px;margin-bottom:4px">{{ t.h1t }}</strong><span style="color:var(--color-neutral-700)">{{ t.h1d }}</span></div></li>
+      <li style="display:flex;gap:16px"><span class="nk-num">2</span><div><strong style="display:block;font-size:19px;margin-bottom:4px">{{ t.h2t }}</strong><span style="color:var(--color-neutral-700)">{{ t.h2d }}</span></div></li>
+      <li style="display:flex;gap:16px"><span class="nk-num">3</span><div><strong style="display:block;font-size:19px;margin-bottom:4px">{{ t.h3t }}</strong><span style="color:var(--color-neutral-700)">{{ t.h3d }}</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="details" class="nk-sec">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.d_title }}</h2>
+    <p class="nk-sub">{{ t.d_sub }}</p>
+    <div class="nk-grid" style="gap:18px">
+      <div class="nk-fact"><h3>{{ t.d1t }}</h3><p>{{ t.d1d }}</p></div>
+      <div class="nk-fact"><h3>{{ t.d2t }}</h3><p>{{ t.d2d }}</p></div>
+      <div class="nk-fact"><h3>{{ t.d3t }}</h3><p>{{ t.d3d }}</p></div>
+      <div class="nk-fact"><h3>{{ t.d4t }}</h3><p>{{ t.d4d }}</p></div>
+      <div class="nk-fact"><h3>{{ t.d5t }}</h3><p>{{ t.d5d }}</p></div>
+      <div class="nk-fact"><h3>{{ t.d6t }}</h3><p>{{ t.d6d }}</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="nk-sec nk-alt">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.r_title }}</h2>
+    <p class="nk-sub">{{ t.r_sub }}</p>
+    <div class="nk-grid">
+      <figure style="margin:0;background:var(--color-bg);border-radius:var(--radius-lg);padding:30px;display:flex;flex-direction:column;gap:18px">
+        <blockquote style="margin:0;font-size:18px;line-height:1.6"><span style="display:block;font-family:var(--font-heading);font-size:56px;line-height:.6;color:var(--color-accent);margin-bottom:8px">“</span>{{ t.r1q }}</blockquote>
+        <figcaption style="margin-top:auto;font-weight:600;color:var(--color-neutral-700);font-size:15px">{{ t.r1n }}</figcaption>
+      </figure>
+      <figure style="margin:0;background:var(--color-bg);border-radius:var(--radius-lg);padding:30px;display:flex;flex-direction:column;gap:18px">
+        <blockquote style="margin:0;font-size:18px;line-height:1.6"><span style="display:block;font-family:var(--font-heading);font-size:56px;line-height:.6;color:var(--color-accent);margin-bottom:8px">“</span>{{ t.r2q }}</blockquote>
+        <figcaption style="margin-top:auto;font-weight:600;color:var(--color-neutral-700);font-size:15px">{{ t.r2n }}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="nk-sec">
+  <div class="nk-wrap" style="display:grid;gap:56px;align-items:center;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+    <img src="nadiya.jpg" alt="Nadiya Kovch" style="display:block;width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;border-radius:24px">
+    <div>
+      <h2 class="nk-h2">{{ t.a_title }}</h2>
+      <p style="margin:0 0 14px;color:var(--color-neutral-700);max-width:36em">{{ t.a_p1 }}</p>
+      <p style="margin:0 0 14px;color:var(--color-neutral-700);max-width:36em">{{ t.a_p2 }}</p>
+      <p style="margin:0 0 14px;color:var(--color-neutral-700);max-width:36em">{{ t.a_p3 }}</p>
+      <p style="margin:24px 0 0;background:var(--color-accent-100);border-radius:var(--radius-lg);padding:30px;font-family:var(--font-heading);font-size:24px;line-height:1.3;color:var(--color-text)">{{ t.a_quote }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="hello" class="nk-sec nk-alt" hidden="{{ helloHidden }}">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.v_title }}</h2>
+    <p class="nk-sub">{{ t.v_sub }}</p>
+    <video controls preload="none" playsinline onLoadedMetadata="{{ onVideoReady }}" style="width:100%;max-width:760px;border-radius:20px;border:1px solid var(--color-neutral-200)"></video>
+  </div>
+</section>
+
+<section id="privacy" class="nk-sec" style="padding-top:0">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.p_title }}</h2>
+    <div class="nk-grid" style="gap:18px">
+      <div class="nk-fact"><h3>{{ t.p1t }}</h3><p>{{ t.p1d }}</p></div>
+      <div class="nk-fact"><h3>{{ t.p2t }}</h3><p>{{ t.p2d }}</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="nk-sec nk-alt">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.o_title }}</h2>
+    <p class="nk-sub">{{ t.o_sub }}</p>
+    <form onSubmit="{{ submitForm }}" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));max-width:680px">
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_name }}</span><input class="nk-input" name="name" required autocomplete="name"></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_contact }}</span><input class="nk-input" name="contact" required></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_lang }}</span>
+        <select class="nk-input" name="lang"><option>{{ t.l1 }}</option><option>{{ t.l2 }}</option><option>{{ t.l3 }}</option></select></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_service }}</span>
+        <select class="nk-input" name="service"><option>{{ t.sv1 }}</option><option>{{ t.sv2 }}</option><option>{{ t.sv3 }}</option><option>{{ t.sv4 }}</option><option>{{ t.sv5 }}</option><option>{{ t.sv6 }}</option></select></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_date }}</span><input class="nk-input" name="date" type="date"></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_city }}</span><input class="nk-input" name="city"></label>
+      <label class="nk-label" style="grid-column:1/-1"><span style="color:var(--color-neutral-700)">{{ t.o_msg }}</span><textarea class="nk-input" name="msg" rows="4" style="resize:vertical"></textarea></label>
+      <div style="grid-column:1/-1"><button type="submit" class="btn btn-primary" style="cursor:pointer;font:inherit">{{ t.o_send }}</button></div>
+      <p hidden="{{ noteHidden }}" style="grid-column:1/-1;margin:0;font-weight:600;color:var(--color-neutral-700)">{{ t.o_note }}</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq" class="nk-sec">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.f_title }}</h2>
+    <details class="nk-details"><summary>{{ t.f1q }}<span style="font-size:26px;line-height:1;color:var(--color-neutral-700)">+</span></summary><p>{{ t.f1a }}</p></details>
+    <details class="nk-details"><summary>{{ t.f2q }}<span style="font-size:26px;line-height:1;color:var(--color-neutral-700)">+</span></summary><p>{{ t.f2a }}</p></details>
+    <details class="nk-details"><summary>{{ t.f3q }}<span style="font-size:26px;line-height:1;color:var(--color-neutral-700)">+</span></summary><p>{{ t.f3a }}</p></details>
+    <details class="nk-details"><summary>{{ t.f4q }}<span style="font-size:26px;line-height:1;color:var(--color-neutral-700)">+</span></summary><p>{{ t.f4a }}</p></details>
+    <details class="nk-details"><summary>{{ t.f5q }}<span style="font-size:26px;line-height:1;color:var(--color-neutral-700)">+</span></summary><p>{{ t.f5a }}</p></details>
+  </div>
+</section>
+
+<section id="contact" class="nk-sec" style="background:var(--color-accent-100);text-align:center">
+  <div class="nk-wrap">
+    <h2 class="nk-h2">{{ t.x_title }}</h2>
+    <p class="nk-sub" style="margin-inline:auto">{{ t.x_sub }}</p>
+    <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px">
+      <div style="display:grid;justify-items:center;gap:6px">
+        <span style="font-size:16px;font-weight:600;color:var(--color-neutral-700)">{{ t.x_call }}</span>
+        <a href="tel:{{ phoneHref }}" style="font-family:var(--font-body);font-size:36px;font-weight:700;letter-spacing:.03em;color:var(--color-text);text-decoration:none">{{ phone }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="padding:28px 0;text-align:center;color:var(--color-neutral-700);font-size:14px;border-top:1px solid var(--color-neutral-200)">
+  <div class="nk-wrap">
+    <img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:66px;width:auto;display:block;margin:0 auto 12px;background:#fff;border-radius:12px">
+    <span>© {{ yr }} Nadiya Kovch</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: "uk", sent: false, videoReady: false };
+  titles = { en: "Nadiya Kovch · Interpreter and Translator", uk: "Nadiya Kovch · Перекладачка", ru: "Nadiya Kovch · Переводчица" };
+  T = {
+en: { nav_services: "Services", nav_how: "How it works", nav_details: "Details", nav_reviews: "Reviews", nav_contact: "Contact",
+  p_title: "Your privacy", p1t: "Documents stay private", p1d: "Your papers are never shared with anyone else.", p2t: "Confidential conversations", p2d: "Everything I hear and read stays between us.",
+  v_title: "A short hello", v_sub: "A short message from me.",
+  o_title: "Send a request", o_sub: "Fill in the short form and I will reply as soon as I can.", o_name: "Your name", o_contact: "Phone or email", o_lang: "Languages", o_service: "Service", o_date: "Date needed", o_city: "City", o_msg: "Tell me more, if you like", o_send: "Send request", o_note: "The form will work once my email is added.",
+  l1: "English and Ukrainian", l2: "English and Russian", l3: "Ukrainian and Russian", sv1: "In person", sv2: "By phone", sv3: "By video", sv4: "Written translation", sv5: "USCIS interview", sv6: "Other",
+  name: "Nadiya Kovch", role: "Interpreter and translator",
+  lead: "Document translation and interpreting for immigration cases, benefits offices and everyday paperwork. English, Ukrainian and Russian.",
+  cta: "Request a service", cta2: "See services",
+  t1t: "15+ years", t1d: "Medical, social and immigration work", t2t: "Three languages", t2d: "English, Ukrainian, Russian", t3t: "Confidential", t3d: "Your papers stay private", t4t: "Local service", t4d: "Portland and Vancouver",
+  s_title: "Services", s_sub: "Clear and accurate language help for official matters.",
+  c1t: "Document translation", c1d: "Careful written translation of your papers.", c1a: "Documents for USCIS", c1b: "Documents for welfare and benefits offices", c1c: "Letters and other documents",
+  c2t: "Interpreting", c2d: "Spoken interpreting when every word counts.", c2a: "Green card interviews at USCIS", c2b: "Interpreting by phone", c2c: "Medical interpreting",
+  h_title: "How it works", h_sub: "Three simple steps from request to result.",
+  h1t: "Send your request", h1d: "Tell me the language, the type of service and the deadline. A short message is enough.",
+  h2t: "I confirm the details", h2d: "I reply with availability and the price before any work begins.",
+  h3t: "I deliver", h3d: "I translate your documents or interpret at the agreed time.",
+  d_title: "Good to know", d_sub: "The practical details in one place.",
+  d1t: "Where I work", d1d: "Portland (Oregon), Vancouver (Washington) and nearby towns.",
+  d2t: "When I work", d2d: "Monday to Friday. Urgent requests are accepted. Closed on Saturday and Sunday.",
+  d3t: "Prices", d3d: "Price on request. Send the details and I will confirm the cost.",
+  d4t: "Payment", d4d: "Cash, card, Zelle and Venmo. All work, including immigration help, is done by prepayment.",
+  d5t: "My focus", d5d: "I focus on helping people with immigration matters. I take the requests that fit this focus.",
+  d6t: "Calls on your behalf", d6d: "I make phone calls for clients with advance payment.",
+  r_title: "Client reviews", r_sub: "What clients say about working with me.",
+  r1q: "Nadiya answers email right away, so there is no long waiting. Everything we asked, she did quickly. She is a very empathetic person. For her it matters not only to give an accurate translation, which she does very professionally, but also to help find the services you need. She knows the paperwork for people who came as refugees very well.", r1n: "Taras Y.",
+  r2q: "Nadiya is a wonderful person who always helps. She calls for me and interprets so that everything becomes clear. She can get through to any office and arrange anything. She has great patience with phone agents, even when she is put on hold. She always encourages me to believe in the best and believes in a positive result herself.", r2n: "Olga B.",
+  a_title: "About me",
+  a_p1: "I am Nadiya Kovch, an interpreter and translator with more than 15 years of experience. I have worked in medical, social and immigration settings, with immigration attorneys, state services and medical clinics.",
+  a_p2: "I studied at Portland Community College and completed medical and social interpreter courses, and I hold a certificate. Most of all, I bring many years of real experience.",
+  a_p3: "I am well familiar with government forms and applications in various fields, and I understand how to fill them out. I have deep compassion for people who are new to America and are finding their way through official systems and immigration status paperwork.",
+  a_quote: "Accurate words help people get the answers they need.",
+  f_title: "Questions",
+  f1q: "Which languages do you work in?", f1a: "English to Ukrainian, Ukrainian to English, English to Russian and Russian to English.",
+  f2q: "Do you help with immigration matters?", f2a: "Yes. I translate documents for USCIS and interpret at green card interviews.",
+  f3q: "What do your services cost?", f3a: "The price depends on the service and the documents. Send the details and I will confirm the cost. All work is done by prepayment.",
+  f4q: "Can you take urgent requests?", f4a: "Yes, on weekdays. I do not work on Saturday and Sunday.",
+  f5q: "Is my information private?", f5a: "Yes. I keep every document and conversation confidential.",
+  x_title: "Request a service", x_sub: "Tell me the language, the service and the date. I will reply as soon as I can.", x_call: "Call"
+},
+uk: {
+  nav_services: "Послуги", nav_how: "Як це працює", nav_details: "Деталі", nav_reviews: "Відгуки", nav_contact: "Контакти",
+  p_title: "Ваша конфіденційність", p1t: "Документи лишаються приватними", p1d: "Ваші папери нікому не передаються.", p2t: "Конфіденційні розмови", p2d: "Усе, що я чую і читаю, лишається між нами.",
+  v_title: "Коротке привітання", v_sub: "Коротке звернення від мене.",
+  o_title: "Залишити запит", o_sub: "Заповніть коротку форму, і я відповім якнайшвидше.", o_name: "Ваше імʼя", o_contact: "Телефон або пошта", o_lang: "Мови", o_service: "Послуга", o_date: "Потрібна дата", o_city: "Місто", o_msg: "Розкажіть детальніше, якщо хочете", o_send: "Надіслати запит", o_note: "Форма запрацює, щойно буде додано пошту.",
+  l1: "Англійська і українська", l2: "Англійська і російська", l3: "Українська і російська", sv1: "Особисто", sv2: "По телефону", sv3: "По відео", sv4: "Письмовий переклад", sv5: "Співбесіда USCIS", sv6: "Інше",
+  name: "Nadiya Kovch", role: "Перекладачка",
+  lead: "Переклад документів і усний переклад для імміграційних справ, установ допомоги та повсякденних паперів. Англійська, українська та російська.",
+  cta: "Замовити послугу", cta2: "Мої послуги",
+  t1t: "Понад 15 років", t1d: "Медична, соціальна й імміграційна сфери", t2t: "Три мови", t2d: "Англійська, українська, російська", t3t: "Конфіденційно", t3d: "Ваші документи лишаються приватними", t4t: "Місцева послуга", t4d: "Портленд і Ванкувер",
+  s_title: "Послуги", s_sub: "Чітка й точна мовна допомога в офіційних справах.",
+  c1t: "Переклад документів", c1d: "Уважний письмовий переклад ваших паперів.", c1a: "Документи для USCIS", c1b: "Документи для велферу та установ допомоги", c1c: "Листи та інші документи",
+  c2t: "Усний переклад", c2d: "Усний переклад, коли важливе кожне слово.", c2a: "Співбесіди на грін-карту в USCIS", c2b: "Переклад по телефону", c2c: "Медичні переклади",
+  h_title: "Як це працює", h_sub: "Три прості кроки від запиту до результату.",
+  h1t: "Надішліть запит", h1d: "Напишіть, що потрібно перекласти і на коли.",
+  h2t: "Я уточнюю деталі", h2d: "Повідомляю, коли я вільна і яка буде ціна.",
+  h3t: "Я перекладаю", h3d: "Роблю письмовий або усний переклад у домовлений час.",
+  d_title: "Корисно знати", d_sub: "Практичні деталі в одному місці.",
+  d1t: "Де я працюю", d1d: "Портленд (Орегон), Ванкувер (Вашингтон) і сусідні міста.",
+  d2t: "Коли я працюю", d2d: "З понеділка по п'ятницю. Термінові запити беру. У суботу й неділю не працюю.",
+  d3t: "Ціни", d3d: "Ціна за запитом. Надішліть деталі, і я підтверджу вартість.",
+  d4t: "Оплата", d4d: "Готівка, картка, Zelle і Venmo. Уся робота, зокрема з імміграційними питаннями, виконується за передоплатою.",
+  d5t: "Мій напрям", d5d: "Я зосереджена на допомозі людям з імміграційними питаннями. Беру запити, які відповідають цьому напряму.",
+  d6t: "Дзвінки від вашого імені", d6d: "Телефонні дзвінки для клієнтів я роблю за попередньою оплатою.",
+  r_title: "Відгуки клієнтів", r_sub: "Що кажуть клієнти про співпрацю зі мною.",
+  r1q: "Надія відповідає на пошту одразу, і чекати довго не доводиться. Усе, про що ми просили, вона робила швидко. Вона дуже емпатична людина. Для неї важливо не лише зробити точний переклад, хоча це вона робить дуже професійно, а й допомогти знайти потрібні сервіси. Вона дуже обізнана в роботі з документами для тих, хто приїхав як біженці.", r1n: "Тарас Я.",
+  r2q: "Надія чудова людина, яка завжди допомагає. Вона телефонує для мене і перекладає так, що все стає зрозумілим. Вона може додзвонитися в будь-які установи і про все домовитися. У неї велике терпіння, коли вона говорить з агентами по телефону, навіть коли її ставлять на паузу. Вона завжди підбадьорює вірити в краще і сама вірить у позитивний результат.", r2n: "Ольга Б.",
+  a_title: "Про мене",
+  a_p1: "Я Nadiya Kovch, перекладачка з досвідом понад 15 років. Я працювала в медичній, соціальній та імміграційній сферах, з імміграційними адвокатами, державними службами та медичними клініками.",
+  a_p2: "Я вчилася в Portland Community College, закінчила курси медичного і соціального перекладача та маю сертифікат. Але найголовніше, у мене великий досвід роботи.",
+  a_p3: "Я добре ознайомлена з державними анкетами, заявами в різних сферах і розумію, як їх заповнювати. Розумію людей, які нещодавно приїхали в Америку і намагаються розібратися в офіційних системах та документах для отримання імміграційного статусу.",
+  a_quote: "Акуратний переклад допомагає людям отримати необхідні відповіді.",
+  f_title: "Питання",
+  f1q: "З якими мовами ви працюєте?", f1a: "З англійської на українську, з української на англійську, з англійської на російську і з російської на англійську.",
+  f2q: "Чи допомагаєте ви з імміграційними питаннями?", f2a: "Так. Я перекладаю документи для USCIS і перекладаю усно на співбесідах на грін-карту.",
+  f3q: "Скільки коштують ваші послуги?", f3a: "Ціна залежить від послуги та документів. Надішліть деталі, і я підтверджу вартість. Уся робота виконується за передоплатою.",
+  f4q: "Чи берете термінові замовлення?", f4a: "Так, у будні дні. У суботу й неділю я не працюю.",
+  f5q: "Чи конфіденційна моя інформація?", f5a: "Так. Кожен документ і кожна розмова лишаються конфіденційними.",
+  x_title: "Замовити послугу", x_sub: "Напишіть мову, послугу і дату. Я відповім якнайшвидше.", x_call: "Подзвонити"
+},
+ru: {
+  nav_services: "Услуги", nav_how: "Как это работает", nav_details: "Детали", nav_reviews: "Отзывы", nav_contact: "Контакты",
+  p_title: "Ваша конфиденциальность", p1t: "Документы остаются приватными", p1d: "Ваши бумаги никому не передаются.", p2t: "Конфиденциальные разговоры", p2d: "Всё, что я слышу и читаю, остаётся между нами.",
+  v_title: "Короткое приветствие", v_sub: "Короткое обращение от меня.",
+  o_title: "Оставить запрос", o_sub: "Заполните короткую форму, и я отвечу как можно скорее.", o_name: "Ваше имя", o_contact: "Телефон или почта", o_lang: "Языки", o_service: "Услуга", o_date: "Нужная дата", o_city: "Город", o_msg: "Расскажите подробнее, если хотите", o_send: "Отправить запрос", o_note: "Форма заработает, как только будет добавлена почта.",
+  l1: "Английский и украинский", l2: "Английский и русский", l3: "Украинский и русский", sv1: "Лично", sv2: "По телефону", sv3: "По видео", sv4: "Письменный перевод", sv5: "Собеседование USCIS", sv6: "Другое",
+  name: "Nadiya Kovch", role: "Переводчица",
+  lead: "Перевод документов и устный перевод для иммиграционных дел, учреждений помощи и повседневных бумаг. Английский, украинский и русский.",
+  cta: "Заказать услугу", cta2: "Мои услуги",
+  t1t: "Более 15 лет", t1d: "Медицинская, социальная и иммиграционная сферы", t2t: "Три языка", t2d: "Английский, украинский, русский", t3t: "Конфиденциально", t3d: "Ваши документы остаются приватными", t4t: "Местная услуга", t4d: "Портленд и Ванкувер",
+  s_title: "Услуги", s_sub: "Чёткая и точная языковая помощь в официальных делах.",
+  c1t: "Перевод документов", c1d: "Внимательный письменный перевод ваших бумаг.", c1a: "Документы для USCIS", c1b: "Документы для велфера и учреждений помощи", c1c: "Письма и другие документы",
+  c2t: "Устный перевод", c2d: "Устный перевод, когда важно каждое слово.", c2a: "Собеседования на грин-карту в USCIS", c2b: "Перевод по телефону", c2c: "Медицинские переводы",
+  h_title: "Как это работает", h_sub: "Три простых шага от запроса до результата.",
+  h1t: "Отправьте запрос", h1d: "Напишите, что нужно перевести и на когда.",
+  h2t: "Я уточняю детали", h2d: "Сообщаю, когда я свободна и какая будет цена.",
+  h3t: "Я перевожу", h3d: "Делаю письменный или устный перевод в согласованное время.",
+  d_title: "Полезно знать", d_sub: "Практические детали в одном месте.",
+  d1t: "Где я работаю", d1d: "Портленд (Орегон), Ванкувер (Вашингтон) и соседние города.",
+  d2t: "Когда я работаю", d2d: "С понедельника по пятницу. Срочные запросы принимаю. В субботу и воскресенье не работаю.",
+  d3t: "Цены", d3d: "Цена по запросу. Пришлите детали, и я подтвержу стоимость.",
+  d4t: "Оплата", d4d: "Наличные, карта, Zelle и Venmo. Вся работа, в том числе по иммиграционным вопросам, выполняется по предоплате.",
+  d5t: "Моё направление", d5d: "Я сосредоточена на помощи людям с иммиграционными вопросами. Беру запросы, которые соответствуют этому направлению.",
+  d6t: "Звонки от вашего имени", d6d: "Телефонные звонки для клиентов я делаю по предварительной оплате.",
+  r_title: "Отзывы клиентов", r_sub: "Что говорят клиенты о работе со мной.",
+  r1q: "Надя отвечает на почту сразу, и долго ждать не приходится. Всё, о чём мы просили, она делала быстро. Она очень эмпатичный человек. Для неё важно не только сделать точный перевод, хотя это она делает очень профессионально, но и помочь найти нужные сервисы. Она очень хорошо разбирается в документах для тех, кто приехал как беженец.", r1n: "Тарас Я.",
+  r2q: "Надя замечательный человек, всегда готовая помочь. Она звонит для меня и переводит так, что всё становится понятным. Она может дозвониться в любые учреждения и обо всём договориться. У неё большое терпение, когда она говорит с агентами по телефону, даже когда её ставят на паузу. Она всегда подбадривает верить в лучшее и сама верит в положительный результат.", r2n: "Ольга Б.",
+  a_title: "Обо мне",
+  a_p1: "Я Nadiya Kovch, переводчица с опытом более 15 лет. Я работала в медицинской, социальной и иммиграционной сферах, с иммиграционными адвокатами, государственными службами и медицинскими клиниками.",
+  a_p2: "Я училась в Portland Community College, закончила курсы медицинского и социального переводчика и имею сертификат. Но самое главное, у меня большой опыт работы.",
+  a_p3: "Я хорошо знакома с государственными анкетами и заявлениями в разных сферах и понимаю, как их заполнять. Я понимаю людей, которые недавно приехали в Америку и пытаются разобраться в официальных системах и документах для получения иммиграционного статуса.",
+  a_quote: "Точные слова помогают людям получить нужные ответы.",
+  f_title: "Вопросы",
+  f1q: "С какими языками вы работаете?", f1a: "С английского на украинский, с украинского на английский, с английского на русский и с русского на английский.",
+  f2q: "Помогаете ли вы с иммиграционными вопросами?", f2a: "Да. Я перевожу документы для USCIS и перевожу устно на собеседованиях на грин-карту.",
+  f3q: "Сколько стоят ваши услуги?", f3a: "Цена зависит от услуги и документов. Пришлите детали, и я подтвержу стоимость. Вся работа выполняется по предоплате.",
+  f4q: "Берёте ли вы срочные заказы?", f4a: "Да, в будние дни. В субботу и воскресенье я не работаю.",
+  f5q: "Конфиденциальна ли моя информация?", f5a: "Да. Каждый документ и каждый разговор остаются конфиденциальными.",
+  x_title: "Заказать услугу", x_sub: "Напишите язык, услугу и дату. Я отвечу как можно скорее.", x_call: "Позвонить"
+}
+  };
+  componentDidMount() {
+    let s = null;
+    try { s = localStorage.getItem("nk-lang"); } catch (e) {}
+    if (!(s && this.T[s])) { const n = (navigator.language || "uk").slice(0, 2).toLowerCase(); s = this.T[n] ? n : "uk"; }
+    this.setState({ lang: s });
+    document.title = this.titles[s];
+  }
+  renderVals() {
+    const l = this.state.lang;
+    const setLang = c => {
+      try { localStorage.setItem("nk-lang", c); } catch (e) {}
+      document.title = this.titles[c];
+      this.setState({ lang: c });
+    };
+    const css = c => (l === c ? "background:var(--color-accent-700);color:#fff" : "background:transparent;color:var(--color-neutral-700)");
+    return {
+      t: this.T[l], yr: new Date().getFullYear(), phone: "503 756 3077", phoneHref: "+15037563077",
+      isEn: String(l === "en"), isUk: String(l === "uk"), isRu: String(l === "ru"),
+      enCss: css("en"), ukCss: css("uk"), ruCss: css("ru"),
+      setEn: () => setLang("en"), setUk: () => setLang("uk"), setRu: () => setLang("ru"),
+      submitForm: e => { e.preventDefault(); this.setState({ sent: true }); },
+      noteHidden: !this.state.sent,
+      helloHidden: !this.state.videoReady,
+      onVideoReady: () => this.setState({ videoReady: true })
+    };
+  }
+}
+</script>
+</body>
+</html>
