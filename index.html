@@ -202,26 +202,6 @@ a:hover{color:var(--color-accent-600)}
   </div>
 </section>
 
-<section id="order" class="nk-sec nk-alt">
-  <div class="nk-wrap">
-    <h2 class="nk-h2">{{ t.o_title }}</h2>
-    <p class="nk-sub">{{ t.o_sub }}</p>
-    <form onSubmit="{{ submitForm }}" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));max-width:680px">
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_name }}</span><input class="nk-input" name="name" required autocomplete="name"></label>
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_contact }}</span><input class="nk-input" name="contact" required></label>
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_lang }}</span>
-        <select class="nk-input" name="lang"><option>{{ t.l1 }}</option><option>{{ t.l2 }}</option><option>{{ t.l3 }}</option></select></label>
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_service }}</span>
-        <select class="nk-input" name="service"><option>{{ t.sv1 }}</option><option>{{ t.sv2 }}</option><option>{{ t.sv3 }}</option><option>{{ t.sv4 }}</option><option>{{ t.sv5 }}</option><option>{{ t.sv6 }}</option></select></label>
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_date }}</span><input class="nk-input" name="date" type="date"></label>
-      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_city }}</span><input class="nk-input" name="city"></label>
-      <label class="nk-label" style="grid-column:1/-1"><span style="color:var(--color-neutral-700)">{{ t.o_msg }}</span><textarea class="nk-input" name="msg" rows="4" style="resize:vertical"></textarea></label>
-      <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-      <div style="grid-column:1/-1"><button type="submit" class="btn btn-primary" style="cursor:pointer;font:inherit">{{ t.o_send }}</button><p class="nk-form-status" role="status" style="margin:12px 0 0;color:var(--color-neutral-700)"></p></div>
-    </form>
-  </div>
-</section>
-
 <section id="faq" class="nk-sec">
   <div class="nk-wrap">
     <h2 class="nk-h2">{{ t.f_title }}</h2>
@@ -233,16 +213,23 @@ a:hover{color:var(--color-accent-600)}
   </div>
 </section>
 
-<section id="contact" class="nk-sec" style="background:var(--color-accent-100);text-align:center">
+<section id="contact" class="nk-sec nk-alt">
   <div class="nk-wrap">
-    <h2 class="nk-h2">{{ t.x_title }}</h2>
-    <p class="nk-sub" style="margin-inline:auto">{{ t.x_sub }}</p>
-    <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px">
-      <div style="display:grid;justify-items:center;gap:6px">
-        <button type="button" onClick="{{ callClick }}" class="btn btn-primary" style="cursor:pointer;font:inherit;font-size:20px;padding:16px 40px">{{ t.x_call }}</button>
-        <span class="nk-phone-out" style="font-family:var(--font-body);font-size:32px;font-weight:700;letter-spacing:.03em;min-height:40px"></span>
-      </div>
-    </div>
+    <h2 class="nk-h2">{{ t.o_title }}</h2>
+    <p class="nk-sub">{{ t.o_sub }}</p>
+    <form onSubmit="{{ submitForm }}" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));max-width:680px">
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_name }}</span><input class="nk-input" name="name" required autocomplete="name"></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_contact }}</span><input class="nk-input" name="contact" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_lang }}</span>
+        <select class="nk-input" name="lang"><option>{{ t.l1 }}</option><option>{{ t.l2 }}</option><option>{{ t.l3 }}</option></select></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_service }}</span>
+        <select class="nk-input" name="service"><option>{{ t.sv1 }}</option><option>{{ t.sv2 }}</option><option>{{ t.sv3 }}</option><option>{{ t.sv4 }}</option><option>{{ t.sv5 }}</option><option>{{ t.sv6 }}</option></select></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_date }}</span><input class="nk-input" name="date" type="date"></label>
+      <label class="nk-label"><span style="color:var(--color-neutral-700)">{{ t.o_city }}</span><input class="nk-input" name="city"></label>
+      <label class="nk-label" style="grid-column:1/-1"><span style="color:var(--color-neutral-700)">{{ t.o_msg }}</span><textarea class="nk-input" name="msg" rows="4" style="resize:vertical"></textarea></label>
+      <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <div style="grid-column:1/-1"><button type="submit" class="btn btn-primary" style="cursor:pointer;font:inherit">{{ t.o_send }}</button><p class="nk-form-status" role="status" style="margin:12px 0 0;color:var(--color-neutral-700)"></p></div>
+    </form>
   </div>
 </section>
 </main>
@@ -263,7 +250,7 @@ class Component extends DCLogic {
 en: { nav_services: "Services", nav_how: "How it works", nav_details: "Details", nav_reviews: "Reviews", nav_contact: "Contact",
   p_title: "Your privacy", p1t: "Documents stay private", p1d: "Your papers are never shared with anyone else.", p2t: "Confidential conversations", p2d: "Everything I hear and read stays between us.",
   v_title: "A short hello", v_sub: "A short message from me.",
-  o_title: "Send a request", o_sub: "Fill in the short form and I will reply as soon as I can.", o_name: "Your name", o_contact: "Phone or email", o_lang: "Languages", o_service: "Service", o_date: "Date needed", o_city: "City", o_msg: "Tell me more, if you like", o_send: "Send request",
+  o_title: "Send a request", o_sub: "Fill in the short form and leave your phone number. If your request is serious, I will call you back.", o_name: "Your name", o_contact: "Your phone number", o_lang: "Languages", o_service: "Service", o_date: "Date needed", o_city: "City", o_msg: "Tell me more, if you like", o_send: "Send request",
   l1: "English and Ukrainian", l2: "English and Russian", l3: "Ukrainian and Russian", sv1: "In person", sv2: "By phone", sv3: "By video", sv4: "Written translation", sv5: "USCIS interview", sv6: "Other",
   name: "Nadiya Kovch", role: "Interpreter and translator",
   lead: "Document translation and interpreting for immigration cases, benefits offices and everyday paperwork. English, Ukrainian and Russian.",
@@ -297,13 +284,13 @@ en: { nav_services: "Services", nav_how: "How it works", nav_details: "Details",
   f3q: "What do your services cost?", f3a: "The price depends on the service and the documents. Send the details and I will confirm the cost. All work is done by prepayment.",
   f4q: "Can you take urgent requests?", f4a: "Yes, on weekdays. I do not work on Saturday and Sunday.",
   f5q: "Is my information private?", f5a: "Yes. I keep every document and conversation confidential.",
-  x_title: "Request a service", x_sub: "Tell me the language, the service and the date. I will reply as soon as I can.", x_call: "Call"
+  x_title: "Request a service", x_sub: "Tell me the language, the service and the date. I will reply as soon as I can."
 },
 uk: {
   nav_services: "Послуги", nav_how: "Як це працює", nav_details: "Деталі", nav_reviews: "Відгуки", nav_contact: "Контакти",
   p_title: "Ваша конфіденційність", p1t: "Документи лишаються приватними", p1d: "Ваші папери нікому не передаються.", p2t: "Конфіденційні розмови", p2d: "Усе, що я чую і читаю, лишається між нами.",
   v_title: "Коротке привітання", v_sub: "Коротке звернення від мене.",
-  o_title: "Залишити запит", o_sub: "Заповніть коротку форму, і я відповім якнайшвидше.", o_name: "Ваше імʼя", o_contact: "Телефон або пошта", o_lang: "Мови", o_service: "Послуга", o_date: "Потрібна дата", o_city: "Місто", o_msg: "Розкажіть детальніше, якщо хочете", o_send: "Надіслати запит",
+  o_title: "Залишити запит", o_sub: "Заповніть коротку форму і залишіть свій телефон. Я передзвоню вам.", o_name: "Ваше імʼя", o_contact: "Ваш номер телефону", o_lang: "Мови", o_service: "Послуга", o_date: "Потрібна дата", o_city: "Місто", o_msg: "Розкажіть детальніше, якщо хочете", o_send: "Надіслати запит",
   l1: "Англійська і українська", l2: "Англійська і російська", l3: "Українська і російська", sv1: "Особисто", sv2: "По телефону", sv3: "По відео", sv4: "Письмовий переклад", sv5: "Співбесіда USCIS", sv6: "Інше",
   name: "Nadiya Kovch", role: "Перекладачка",
   lead: "Переклад документів і усний переклад для імміграційних справ, установ допомоги та повсякденних паперів. Англійська, українська та російська.",
@@ -337,13 +324,13 @@ uk: {
   f3q: "Скільки коштують ваші послуги?", f3a: "Ціна залежить від послуги та документів. Надішліть деталі, і я підтверджу вартість. Уся робота виконується за передоплатою.",
   f4q: "Чи берете термінові замовлення?", f4a: "Так, у будні дні. У суботу й неділю я не працюю.",
   f5q: "Чи конфіденційна моя інформація?", f5a: "Так. Кожен документ і кожна розмова лишаються конфіденційними.",
-  x_title: "Замовити послугу", x_sub: "Напишіть мову, послугу і дату. Я відповім якнайшвидше.", x_call: "Подзвонити"
+  x_title: "Замовити послугу", x_sub: "Напишіть мову, послугу і дату. Я відповім якнайшвидше."
 },
 ru: {
   nav_services: "Услуги", nav_how: "Как это работает", nav_details: "Детали", nav_reviews: "Отзывы", nav_contact: "Контакты",
   p_title: "Ваша конфиденциальность", p1t: "Документы остаются приватными", p1d: "Ваши бумаги никому не передаются.", p2t: "Конфиденциальные разговоры", p2d: "Всё, что я слышу и читаю, остаётся между нами.",
   v_title: "Короткое приветствие", v_sub: "Короткое обращение от меня.",
-  o_title: "Оставить запрос", o_sub: "Заполните короткую форму, и я отвечу как можно скорее.", o_name: "Ваше имя", o_contact: "Телефон или почта", o_lang: "Языки", o_service: "Услуга", o_date: "Нужная дата", o_city: "Город", o_msg: "Расскажите подробнее, если хотите", o_send: "Отправить запрос",
+  o_title: "Оставить запрос", o_sub: "Заполните короткую форму и оставьте свой телефон. Я перезвоню вам.", o_name: "Ваше имя", o_contact: "Ваш номер телефона", o_lang: "Языки", o_service: "Услуга", o_date: "Нужная дата", o_city: "Город", o_msg: "Расскажите подробнее, если хотите", o_send: "Отправить запрос",
   l1: "Английский и украинский", l2: "Английский и русский", l3: "Украинский и русский", sv1: "Лично", sv2: "По телефону", sv3: "По видео", sv4: "Письменный перевод", sv5: "Собеседование USCIS", sv6: "Другое",
   name: "Nadiya Kovch", role: "Переводчица",
   lead: "Перевод документов и устный перевод для иммиграционных дел, учреждений помощи и повседневных бумаг. Английский, украинский и русский.",
@@ -377,7 +364,7 @@ ru: {
   f3q: "Сколько стоят ваши услуги?", f3a: "Цена зависит от услуги и документов. Пришлите детали, и я подтвержу стоимость. Вся работа выполняется по предоплате.",
   f4q: "Берёте ли вы срочные заказы?", f4a: "Да, в будние дни. В субботу и воскресенье я не работаю.",
   f5q: "Конфиденциальна ли моя информация?", f5a: "Да. Каждый документ и каждый разговор остаются конфиденциальными.",
-  x_title: "Заказать услугу", x_sub: "Напишите язык, услугу и дату. Я отвечу как можно скорее.", x_call: "Позвонить"
+  x_title: "Заказать услугу", x_sub: "Напишите язык, услугу и дату. Я отвечу как можно скорее."
 }
   };
   componentDidMount() {
@@ -396,20 +383,16 @@ ru: {
     };
     const css = c => (l === c ? "background:var(--color-accent-700);color:#fff" : "background:transparent;color:var(--color-neutral-700)");
     return {
-      t: this.T[l], yr: new Date().getFullYear(), callClick: e => { const d = ["3077", "756", "503"].reverse(); const n = d.join(""); const root = e.target.closest("div"); const out = root.querySelector(".nk-phone-out");
-        const touch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-        if (touch) { window.location.href = "tel:+1" + n; }
-        else if (out && !out.firstChild) { const a = document.createElement("a"); a.href = "tel:+1" + n; a.textContent = d[0] + " " + d[1] + " " + d[2]; a.style.color = "inherit"; a.style.textDecoration = "none"; out.appendChild(a); } },
-      isEn: String(l === "en"), isUk: String(l === "uk"), isRu: String(l === "ru"),
+      t: this.T[l], yr: new Date().getFullYear(), isEn: String(l === "en"), isUk: String(l === "uk"), isRu: String(l === "ru"),
       enCss: css("en"), ukCss: css("uk"), ruCss: css("ru"),
       setEn: () => setLang("en"), setUk: () => setLang("uk"), setRu: () => setLang("ru"),
       submitForm: e => { e.preventDefault(); const f = e.target; const L = this.state.lang;
         const get = n => (f.elements[n] ? f.elements[n].value : "");
         const sel = n => (f.elements[n] ? f.elements[n].options[f.elements[n].selectedIndex].text : "");
         const M = {
-          en: { sending: "Sending…", ok: "Thank you. Your request was sent. I will reply as soon as I can.", err: "Something went wrong. Please try again or use the Call button." },
-          uk: { sending: "Надсилаю…", ok: "Дякую. Запит надіслано. Я відповім якнайшвидше.", err: "Щось пішло не так. Спробуйте ще раз або натисніть «Подзвонити»." },
-          ru: { sending: "Отправляю…", ok: "Спасибо. Запрос отправлен. Я отвечу как можно скорее.", err: "Что-то пошло не так. Попробуйте ещё раз или нажмите «Позвонить»." }
+          en: { sending: "Sending…", ok: "Thank you. Your request was sent. I will call you back.", err: "Something went wrong. Please try again." },
+          uk: { sending: "Надсилаю…", ok: "Дякую. Запит надіслано. Я вам передзвоню.", err: "Щось пішло не так. Спробуйте ще раз." },
+          ru: { sending: "Отправляю…", ok: "Спасибо. Запрос отправлен. Я вам перезвоню.", err: "Что-то пошло не так. Попробуйте ещё раз." }
         }[L];
         const st = f.querySelector(".nk-form-status"); const btn = f.querySelector("button[type=submit]");
         const show = s => { if (st) st.textContent = s; };
