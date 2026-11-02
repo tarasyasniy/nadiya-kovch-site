@@ -127,7 +127,7 @@
         h+='<a class="nk-nr-item" style="--c:'+c+'" href="news.html#'+esc(it.id)+'"><span class="nk-nr-thumb">'+art(it.art,c).replace('<svg ','<svg preserveAspectRatio="xMidYMid slice" ')+'</span><span class="nk-nr-body"><span class="nk-nr-meta" style="color:'+c+'">'+esc(it.tag)+' · '+esc(fmt(it.date,l))+'</span><strong>'+esc(t.title)+'</strong><span class="nk-nr-sum">'+esc(t.summary)+'</span></span></a>';});
       h+='</div><a class="nk-nr-all" href="news.html">'+esc(u.all)+' →</a>';
       rail.innerHTML=h;});}
-    function place(){var t=document.getElementById("services");if(window.innerWidth<1100&&t&&t.parentNode&&rail.nextSibling!==t){t.parentNode.insertBefore(rail,t);}}
+    function place(){var t=document.getElementById("services");if(t&&t.parentNode&&rail.nextSibling!==t){t.parentNode.insertBefore(rail,t);}}
     drawRail();place();setInterval(function(){drawRail();place();},600);
   }
 
