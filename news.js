@@ -14,12 +14,12 @@
   if(rail){
     var cur="";
     function drawRail(){load(function(d){var l=lang();if(l===cur)return;cur=l;var u=d.ui[l];
-      var h='<h2>'+esc(u.title)+'</h2>';
+      var h='<h2>'+esc(u.title)+'</h2><div class="nk-nr-scroll">';
       sorted(d).slice(0,4).forEach(function(it){var t=it[l];
         h+='<a class="nk-nr-item" href="news.html#'+esc(it.id)+'"><span class="nk-nr-meta">'+esc(it.tag)+' · '+esc(fmt(it.date,l))+'</span><strong>'+esc(t.title)+'</strong><span class="nk-nr-sum">'+esc(t.summary)+'</span></a>';});
-      h+='<a class="nk-nr-all" href="news.html">'+esc(u.all)+' →</a>';
+      h+='</div><a class="nk-nr-all" href="news.html">'+esc(u.all)+' →</a>';
       rail.innerHTML=h;});}
-    function place(){var f=document.querySelector("footer");if(window.innerWidth<1100&&f&&f.parentNode&&rail.nextSibling!==f){f.parentNode.insertBefore(rail,f);}}
+    function place(){var t=document.getElementById("services");if(window.innerWidth<1100&&t&&t.parentNode&&rail.nextSibling!==t){t.parentNode.insertBefore(rail,t);}}
     drawRail();place();setInterval(function(){drawRail();place();},600);
   }
 
