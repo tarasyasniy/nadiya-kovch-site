@@ -123,8 +123,8 @@
     var cur="";
     function drawRail(){load(function(d){var l=lang();if(l===cur)return;cur=l;var u=d.ui[l];
       var h='<h2>'+esc(u.title)+'</h2><div class="nk-nr-scroll">';
-      sorted(d).slice(0,4).forEach(function(it){var t=it[l];
-        h+='<a class="nk-nr-item" href="news.html#'+esc(it.id)+'"><span class="nk-nr-meta">'+esc(it.tag)+' · '+esc(fmt(it.date,l))+'</span><strong>'+esc(t.title)+'</strong><span class="nk-nr-sum">'+esc(t.summary)+'</span></a>';});
+      sorted(d).slice(0,4).forEach(function(it){var t=it[l],c=it.accent||"#1A4F82";
+        h+='<a class="nk-nr-item" style="--c:'+c+'" href="news.html#'+esc(it.id)+'"><span class="nk-nr-thumb">'+art(it.art,c).replace('<svg ','<svg preserveAspectRatio="xMidYMid slice" ')+'</span><span class="nk-nr-body"><span class="nk-nr-meta" style="color:'+c+'">'+esc(it.tag)+' · '+esc(fmt(it.date,l))+'</span><strong>'+esc(t.title)+'</strong><span class="nk-nr-sum">'+esc(t.summary)+'</span></span></a>';});
       h+='</div><a class="nk-nr-all" href="news.html">'+esc(u.all)+' →</a>';
       rail.innerHTML=h;});}
     function place(){var t=document.getElementById("services");if(window.innerWidth<1100&&t&&t.parentNode&&rail.nextSibling!==t){t.parentNode.insertBefore(rail,t);}}
