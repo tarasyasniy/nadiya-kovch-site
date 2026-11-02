@@ -1,9 +1,9 @@
 {
  "updated": "2026-11-01",
  "disclaimer": {
-  "en": "General information from public sources, not legal advice. Check the linked source and consult an attorney for your own case.",
-  "uk": "Загальна інформація з відкритих джерел, не юридична порада. Перевіряйте першоджерело за посиланням і звертайтесь до адвоката щодо власного випадку.",
-  "ru": "Общая информация из открытых источников, не юридический совет. Проверяйте первоисточник по ссылке и обращайтесь к адвокату по своему случаю."
+  "en": "Information only, not legal advice. I am not a lawyer and I take no responsibility for decisions based on this page. The information may be outdated or incomplete. Check the official source linked in each article and consult an attorney or accredited representative about your own case.",
+  "uk": "Лише інформація, а не юридична порада. Я не адвокат і не несу відповідальності за рішення, ухвалені на основі цієї сторінки. Інформація може бути застарілою або неповною. Перевіряйте офіційне джерело за посиланням у статті та звертайтесь до адвоката або акредитованого представника щодо свого випадку.",
+  "ru": "Только информация, а не юридический совет. Я не адвокат и не несу ответственности за решения, принятые на основе этой страницы. Информация может быть устаревшей или неполной. Проверяйте официальный источник по ссылке в статье и обращайтесь к адвокату или аккредитованному представителю по своему случаю."
  },
  "ui": {
   "en": {
@@ -13,7 +13,9 @@
    "home": "Home",
    "source": "Sources",
    "updated": "Updated",
-   "more": "Read"
+   "more": "Read",
+   "facts": "Key points",
+   "footnote": "Information only, not legal advice."
   },
   "uk": {
    "title": "Новини для новоприбулих",
@@ -22,7 +24,9 @@
    "home": "На головну",
    "source": "Джерела",
    "updated": "Оновлено",
-   "more": "Читати"
+   "more": "Читати",
+   "facts": "Ключові пункти",
+   "footnote": "Лише інформація, не юридична порада."
   },
   "ru": {
    "title": "Новости для приезжих",
@@ -31,7 +35,9 @@
    "home": "На главную",
    "source": "Источники",
    "updated": "Обновлено",
-   "more": "Читать"
+   "more": "Читать",
+   "facts": "Главное",
+   "footnote": "Только информация, не юридический совет."
   }
  },
  "items": [
@@ -82,7 +88,11 @@
      "Часть юристов читает закон так, что при отсутствии своевременного решения наступает автоматическое продление на шесть месяцев. Администрация этого не подтвердила, а даты на карточках разрешения на работу автоматически не меняются.",
      "У каждого своя ситуация. По вашему случаю обращайтесь к иммиграционному адвокату или аккредитованному представителю."
     ]
-   }
+   },
+   "layout": "hero",
+   "art": "calendar",
+   "accent": "#1A4F82",
+   "pattern": "dots"
   },
   {
    "id": "fees-hr1-rule",
@@ -130,7 +140,11 @@
      "Разрешения на работу по TPS имеют сборы, установленные законом, их нельзя отменить, а само разрешение ограничено одним годом или остатком периода TPS, смотря что короче.",
      "Юридическая организация также сообщает о сборе $1,000 за предоставление parole, объявленном в октябре 2025 года. Перед подачей проверяйте актуальные инструкции к формам."
     ]
-   }
+   },
+   "layout": "brief",
+   "art": "coins",
+   "accent": "#8A1C1C",
+   "pattern": "dots"
   },
   {
    "id": "i94-uhp-work-proof",
@@ -168,7 +182,11 @@
      "Это информация из обновления юридической организации, а не новая правительственная форма. Работодатели следуют указаниям USCIS по форме I-9, поэтому попросите их проверить актуальную инструкцию I-9.",
      "По вашему случаю обращайтесь к иммиграционному адвокату или аккредитованному представителю."
     ]
-   }
+   },
+   "layout": "steps",
+   "art": "passport",
+   "accent": "#1B1B1B",
+   "pattern": "lines"
   },
   {
    "id": "cdl-non-domiciled",
@@ -206,7 +224,11 @@
      "Одного разрешения на работу уже недостаточно, а люди с U4U parole и TPS больше не могут подавать заявление или продлевать эти права.",
      "Детали могут отличаться по штатам. Если вы водите по работе, уточните в ведомстве водительских удостоверений вашего штата и спросите адвоката о вариантах."
     ]
-   }
+   },
+   "layout": "facts",
+   "art": "truck",
+   "accent": "#2A4D7A",
+   "pattern": "waves"
   },
   {
    "id": "service-ukraine-task-force",
@@ -244,7 +266,720 @@
      "Это источник, где можно проверить изменения и увидеть, что сообщают юридические организации. Он не заменяет официальные страницы USCIS или совет адвоката.",
      "Надежда помогает с устным и письменным переводом для иммиграционных документов и собеседований USCIS. Она не юрист и не даёт юридических советов."
     ]
+   },
+   "layout": "centered",
+   "art": "globe",
+   "accent": "#14304F",
+   "pattern": "waves"
+  },
+  {
+   "id": "ead-tps-renewal-extension",
+   "date": "2026-08-14",
+   "tag": "Work permit",
+   "layout": "columns",
+   "art": "doc",
+   "accent": "#2A7F62",
+   "sources": [
+    {
+     "name": "Fragomen, USCIS extends Ukraine and Sudan TPS EADs",
+     "url": "https://www.fragomen.com/insights/united-states-uscis-extends-certain-ukraine-and-sudan-tps-eads-for-renewal-applicants-through-october-19-2026.html"
+    },
+    {
+     "name": "USCIS, TPS Ukraine",
+     "url": "https://www.uscis.gov/humanitarian/temporary-protected-status/TPS-Ukraine"
+    }
+   ],
+   "en": {
+    "title": "Work permits extended to October 19 for some TPS renewals",
+    "summary": "USCIS extended, until October 19, 2026, work permits for Ukrainians who filed a timely renewal and have not received the new card yet.",
+    "body": [
+     "On August 14, 2026, USCIS announced an automatic extension of certain Ukrainian TPS work permits (EAD) to October 19, 2026.",
+     "It covers people who filed a timely re-registration and a pending renewal application but have not yet received the new card. USCIS sent notices by mail or to myUSCIS accounts.",
+     "An employer can accept the old card together with the USCIS extension notice. On Form I-9 and in E-Verify the expiration date is entered as October 19, 2026, with a note in the Additional Information field.",
+     "October 19 has now passed. Check the USCIS TPS page or a legal aid organization for the latest guidance."
+    ]
+   },
+   "uk": {
+    "title": "Робочі дозволи продовжено до 19 жовтня для частини заявників на поновлення TPS",
+    "summary": "USCIS продовжив до 19 жовтня 2026 року дію робочих дозволів для українців, які вчасно подали заяву на поновлення і ще не отримали нову картку.",
+    "body": [
+     "14 серпня 2026 року USCIS оголосив про автоматичне продовження деяких робочих дозволів (EAD) для українців з TPS до 19 жовтня 2026 року.",
+     "Це стосується людей, які вчасно подали повторну реєстрацію і заяву на поновлення дозволу, але ще не отримали нову картку. Повідомлення USCIS надсилались поштою або в акаунт myUSCIS.",
+     "Роботодавець може прийняти старий дозвіл разом із повідомленням USCIS про продовження. У формі I-9 і в E-Verify вказують дату закінчення 19 жовтня 2026 року і роблять примітку в розділі Additional Information.",
+     "19 жовтня вже минуло. Перевіряйте актуальні вказівки на сторінці USCIS про TPS або звертайтесь до організації з правової допомоги."
+    ]
+   },
+   "ru": {
+    "title": "Рабочие разрешения продлили до 19 октября для части заявителей на продление TPS",
+    "summary": "USCIS продлил до 19 октября 2026 года действие рабочих разрешений для украинцев, которые вовремя подали заявление на продление и еще не получили новую карту.",
+    "body": [
+     "14 августа 2026 года USCIS объявил об автоматическом продлении части рабочих разрешений (EAD) для украинцев с TPS до 19 октября 2026 года.",
+     "Это касается людей, которые вовремя подали повторную регистрацию и заявление на продление разрешения, но еще не получили новую карту. Уведомления USCIS отправлялись по почте или в аккаунт myUSCIS.",
+     "Работодатель может принять старое разрешение вместе с уведомлением USCIS о продлении. В форме I-9 и в E-Verify указывают дату окончания 19 октября 2026 года и делают примечание в разделе Additional Information.",
+     "19 октября уже прошло. Проверяйте актуальные указания на странице USCIS о TPS для Украины или обращайтесь в организацию правовой помощи."
+    ]
+   },
+   "pattern": "lines"
+  },
+  {
+   "id": "dl-oregon-washington",
+   "date": "2026-10-06",
+   "tag": "Driving",
+   "layout": "compare",
+   "art": "car",
+   "accent": "#C98A00",
+   "sources": [
+    {
+     "name": "ASAP, Oregon driver licenses for immigrants",
+     "url": "https://asaptogether.org/en/licenses/oregon/"
+    },
+    {
+     "name": "ASAP, Washington driver licenses for immigrants",
+     "url": "https://asaptogether.org/en/licenses/washington-state/"
+    }
+   ],
+   "en": {
+    "title": "Driver's license in Oregon and Washington: side by side",
+    "summary": "The rules are similar in both states. A work permit is the main route, but other immigrants may also be eligible.",
+    "body": [
+     "Both states ask for a Social Security number (the card is not required if you know the number), proof of address in the state such as a utility bill, rental agreement or school record, and a work permit if you have one. Bring more than one address document.",
+     "Both states require a written test, a driving test, a vision test and a fee. The driving test may need a vehicle.",
+     "Commercial licenses have been blocked for asylum seekers and other immigrants since March 16, 2026. In Washington this rule is being challenged in court."
+    ],
+    "cols": [
+     {
+      "h": "Oregon",
+      "items": [
+       "Asylum seekers with a valid work permit can apply",
+       "ASAP says other immigrants may be eligible even without a work permit or status",
+       "Check the DMV website for your case"
+      ]
+     },
+     {
+      "h": "Washington",
+      "items": [
+       "Asylum seekers with work permits get a standard license, not REAL ID",
+       "Only U.S. citizens can get REAL ID in Washington",
+       "Other immigrants may be eligible, so check with the Department of Licensing"
+      ]
+     }
+    ]
+   },
+   "uk": {
+    "title": "Водійське посвідчення в Орегоні та Вашингтоні: порівняння",
+    "summary": "Правила в обох штатах схожі. Основний шлях це робочий дозвіл, але інші імігранти також можуть мати право.",
+    "body": [
+     "В обох штатах потрібні номер соціального страхування (картка не потрібна, якщо знаєте номер), доказ адреси в штаті, наприклад рахунок за комунальні послуги, договір оренди або шкільний документ, і робочий дозвіл, якщо він є. Краще мати кілька документів з адресою.",
+     "В обох штатах складають письмовий іспит, іспит з водіння, перевірку зору і сплачують збір. Для іспиту з водіння може знадобитись автомобіль.",
+     "Комерційні посвідчення для шукачів притулку та інших імігрантів заблоковані з 16 березня 2026 року. У Вашингтоні це правило оскаржують у суді."
+    ],
+    "cols": [
+     {
+      "h": "Орегон",
+      "items": [
+       "Шукачі притулку з дійсним робочим дозволом можуть подати заяву",
+       "ASAP пише, що інші імігранти можуть мати право навіть без робочого дозволу чи статусу",
+       "Перевіряйте свій випадок на сайті DMV"
+      ]
+     },
+     {
+      "h": "Вашингтон",
+      "items": [
+       "Шукачі притулку з робочим дозволом отримують звичайне посвідчення, не REAL ID",
+       "REAL ID у Вашингтоні можуть отримати лише громадяни США",
+       "Інші імігранти можуть мати право, уточнюйте в Department of Licensing"
+      ]
+     }
+    ]
+   },
+   "ru": {
+    "title": "Водительские права в Орегоне и Вашингтоне: сравнение",
+    "summary": "Правила в обоих штатах похожи. Основной путь это рабочее разрешение, но другие иммигранты тоже могут иметь право.",
+    "body": [
+     "В обоих штатах нужны номер социального страхования (карта не нужна, если вы знаете номер), подтверждение адреса в штате, например счет за коммунальные услуги, договор аренды или школьный документ, и рабочее разрешение, если оно есть. Лучше иметь несколько документов с адресом.",
+     "В обоих штатах сдают письменный экзамен, экзамен по вождению, проверку зрения и платят сбор. Для экзамена по вождению может понадобиться автомобиль.",
+     "Коммерческие права для соискателей убежища и других иммигрантов заблокированы с 16 марта 2026 года. В Вашингтоне это правило оспаривают в суде."
+    ],
+    "cols": [
+     {
+      "h": "Орегон",
+      "items": [
+       "Соискатели убежища с действующим рабочим разрешением могут подать заявление",
+       "ASAP пишет, что другие иммигранты могут иметь право даже без рабочего разрешения или статуса",
+       "Проверяйте свой случай на сайте DMV"
+      ]
+     },
+     {
+      "h": "Вашингтон",
+      "items": [
+       "Соискатели убежища с рабочим разрешением получают обычные права, не REAL ID",
+       "REAL ID в Вашингтоне могут получить только граждане США",
+       "Другие иммигранты могут иметь право, уточняйте в Department of Licensing"
+      ]
+     }
+    ]
+   },
+   "pattern": "grid"
+  },
+  {
+   "id": "snap-oregon",
+   "date": "2026-11-01",
+   "tag": "Food",
+   "layout": "brief",
+   "art": "basket",
+   "accent": "#3A6B35",
+   "sources": [
+    {
+     "name": "Oregon DHS, SNAP",
+     "url": "https://oregon.gov/snap"
+    },
+    {
+     "name": "ODHS, SNAP noncitizen information sheet (undated)",
+     "url": "https://www.oregon.gov/odhs/providers-partners/self-sufficiency/Documents/snap-work-activity-noncitizen-info-sheet-en.pdf"
+    }
+   ],
+   "en": {
+    "title": "Food benefits (SNAP) in Oregon: who can apply",
+    "summary": "Oregon lists Ukrainian parolees admitted in 2022 to 2024 among eligible groups. TPS holders are not mentioned in the sheet.",
+    "body": [
+     "Oregon's SNAP information sheet lists Ukrainian parolees admitted from February 24, 2022 to September 30, 2024 among eligible groups. The sheet puts them under the green card category, so ask the office how the rule applies to your status.",
+     "The sheet does not mention TPS holders. People whose status is not on the list can still apply, and Oregon reviews their situation.",
+     "To apply, use the state SNAP page at oregon.gov/snap or visit a local office. Have your immigration papers, income records and a list of people in your household ready.",
+     "The sheet is undated, so check the current rules before you apply."
+    ]
+   },
+   "uk": {
+    "title": "Продуктові талони (SNAP) в Орегоні: хто може подати заяву",
+    "summary": "Орегон серед дозволених груп називає українських парольованих, які прибули у 2022–2024 роках. TPS у списку не згадано.",
+    "body": [
+     "Інформаційний листок SNAP в Орегоні серед дозволених груп називає українців з паролем, які прибули з 24 лютого 2022 року по 30 вересня 2024 року. Листок відносить їх до категорії грін-карти, тому уточніть в офісі, як правило застосовується до вашого статусу.",
+     "У листку немає згадки про TPS. Люди, чий статус не є в списку, все одно можуть подати заяву, і Орегон розглядає кожен випадок окремо.",
+     "Подати заяву можна на сторінці SNAP штату oregon.gov/snap або в місцевому офісі. Підготуйте імміграційні документи, відомості про доходи і список людей у домогосподарстві.",
+     "Листок без дати, тож перевірте чинні правила перед подачею."
+    ]
+   },
+   "ru": {
+    "title": "Продовольственные талоны (SNAP) в Орегоне: кто может подать заявление",
+    "summary": "Орегон среди разрешенных групп называет украинских парольных, прибывших в 2022–2024 годах. TPS в листке не упоминается.",
+    "body": [
+     "Информационный листок SNAP в Орегоне среди разрешенных групп называет украинцев с парол, прибывших с 24 февраля 2022 года по 30 сентября 2024 года. Листок относит их к категории грин-карты, поэтому уточните в офисе, как правило применяется к вашему статусу.",
+     "В листке нет упоминания TPS. Люди, чей статус не в списке, все равно могут подать заявление, и Орегон рассматривает каждый случай отдельно.",
+     "Подать заявление можно на странице SNAP штата oregon.gov/snap или в местном офисе. Подготовьте иммиграционные документы, сведения о доходах и список людей в домохозяйстве.",
+     "Листок без даты, поэтому проверьте действующие правила перед подачей."
+    ]
+   },
+   "pattern": "grid"
+  },
+  {
+   "id": "snap-washington",
+   "date": "2026-11-01",
+   "tag": "Food",
+   "layout": "facts",
+   "art": "basket",
+   "accent": "#1F6F78",
+   "sources": [
+    {
+     "name": "Washington DSHS, Ukrainian eligibility for public benefits",
+     "url": "https://www.dshs.wa.gov/sites/default/files/ESA/oria/documents/DSHS%20WA%20Ukrainian%20Eligiblity%20for%20Public%20Benefits%20and%20Refugee%20Assistance%20Services.pdf"
+    }
+   ],
+   "en": {
+    "title": "Food benefits (Basic Food) in Washington for Ukrainians",
+    "summary": "The DSHS page lists SNAP, Apple Health and cash help for families with children as open to Ukrainian parolees and refugees.",
+    "body": [
+     "The DSHS page for Ukrainians covers two statuses: refugee or asylee, and Ukrainian humanitarian parole. For both, Basic Food (SNAP) and Apple Health are listed as available.",
+     "TANF cash help is listed for households with minor children, and Refugee Cash Assistance for individuals and couples without minor children.",
+     "The page does not mention TPS or U4U. If your status is different, call DSHS or a legal aid group before you apply."
+    ],
+    "facts": [
+     "SNAP (Basic Food): listed for both statuses",
+     "Apple Health (Medicaid): listed for both statuses",
+     "WIC: possibly eligible for pregnant people, new mothers and children under 5",
+     "TANF: households with minor children",
+     "Refugee Cash Assistance: adults without minor children",
+     "Reception and Placement program: refugees only"
+    ]
+   },
+   "uk": {
+    "title": "Продуктові талони (Basic Food) у Вашингтоні для українців",
+    "summary": "DSHS вказує SNAP, Apple Health і грошову допомогу для родин з дітьми як доступні українцям з гуманітарним паролем і статусом біженця.",
+    "body": [
+     "Сторінка DSHS для українців охоплює два статуси: біженець або отримувач притулку та гуманітарний пароль для українців. Для обох статусів вказано Basic Food (SNAP) і Apple Health.",
+     "Грошова допомога TANF передбачена для домогосподарств з неповнолітніми дітьми, а Refugee Cash Assistance для дорослих без неповнолітніх дітей.",
+     "На сторінці немає згадки про TPS і U4U. Якщо ваш статус інший, перед подачею зателефонуйте в DSHS або в організацію правової допомоги."
+    ],
+    "facts": [
+     "SNAP (Basic Food): вказано для обох статусів",
+     "Apple Health (Medicaid): вказано для обох статусів",
+     "WIC: можливо, для вагітних, мам з немовлятами і дітей до 5 років",
+     "TANF: домогосподарства з неповнолітніми дітьми",
+     "Refugee Cash Assistance: дорослі без неповнолітніх дітей",
+     "Програма розміщення біженців: лише для біженців"
+    ]
+   },
+   "ru": {
+    "title": "Продовольственные талоны (Basic Food) в Вашингтоне для украинцев",
+    "summary": "DSHS указывает SNAP, Apple Health и денежную помощь для семей с детьми как доступные украинцам с гуманитарным парол и статусом беженца.",
+    "body": [
+     "Страница DSHS для украинцев охватывает два статуса: беженец или получатель убежища и украинский гуманитарный парол. Для обоих статусов указаны Basic Food (SNAP) и Apple Health.",
+     "Денежная помощь TANF предусмотрена для домохозяйств с несовершеннолетними детьми, а Refugee Cash Assistance для взрослых без несовершеннолетних детей.",
+     "На странице нет упоминания TPS и U4U. Если ваш статус другой, перед подачей позвоните в DSHS или в организацию правовой помощи."
+    ],
+    "facts": [
+     "SNAP (Basic Food): указано для обоих статусов",
+     "Apple Health (Medicaid): указано для обоих статусов",
+     "WIC: возможно, для беременных, мам с грудными детьми и детей до 5 лет",
+     "TANF: домохозяйства с несовершеннолетними детьми",
+     "Refugee Cash Assistance: взрослые без несовершеннолетних детей",
+     "Программа приема беженцев: только для беженцев"
+    ]
+   },
+   "pattern": "dots"
+  },
+  {
+   "id": "english-classes-washington",
+   "date": "2026-11-01",
+   "tag": "Language",
+   "layout": "hero",
+   "art": "book",
+   "accent": "#5B3E96",
+   "sources": [
+    {
+     "name": "Washington DSHS, Ukrainian eligibility for public benefits",
+     "url": "https://www.dshs.wa.gov/sites/default/files/ESA/oria/documents/DSHS%20WA%20Ukrainian%20Eligiblity%20for%20Public%20Benefits%20and%20Refugee%20Assistance%20Services.pdf"
+    }
+   ],
+   "en": {
+    "title": "Free English classes in Washington: where to start",
+    "summary": "State-funded programs for Ukrainian parolees and refugees include English classes, job services and health screening.",
+    "body": [
+     "Programs funded by the state refugee and immigrant office (ORIA) in Washington are open to Ukrainian humanitarian parolees and refugees. They include English classes, employment services, health screening and youth and elder programs.",
+     "The DSHS page does not list class schedules or how to sign up. Ask a local resettlement or community agency, or call the DSHS office, and ask whether a placement test is needed and whether the class is free.",
+     "English is the main thing that makes the next steps easier, from job search to driving tests, so it is worth starting early."
+    ]
+   },
+   "uk": {
+    "title": "Безкоштовні курси англійської у Вашингтоні: з чого почати",
+    "summary": "Програми, що фінансуються штатом для українських паролів і біженців, включають курси англійської, допомогу з роботою та медичні перевірки.",
+    "body": [
+     "Програми, які фінансує державний офіс для біженців та імігрантів (ORIA) у Вашингтоні, доступні українцям з гуманітарним паролем і біженцям. Серед них курси англійської, послуги з працевлаштування, медичні перевірки та програми для молоді й людей похилого віку.",
+     "На сторінці DSHS немає розкладу занять і порядку запису. Зверніться до місцевої агенції з розселення або громадської організації чи зателефонуйте в офіс DSHS і уточніть, чи потрібен тест на рівень, і чи безкоштовний курс.",
+     "Англійська допомагає з пошуком роботи, іспитами з водіння та іншими кроками, тому варто почати рано."
+    ]
+   },
+   "ru": {
+    "title": "Бесплатные курсы английского в Вашингтоне: с чего начать",
+    "summary": "Программы, финансируемые штатом для украинских парольных и беженцев, включают курсы английского, помощь с работой и медицинские проверки.",
+    "body": [
+     "Программы, которые финансирует государственный офис для беженцев и иммигрантов (ORIA) в Вашингтоне, доступны украинцам с гуманитарным парол и беженцам. Среди них курсы английского, услуги по трудоустройству, медицинские проверки и программы для молодежи и пожилых людей.",
+     "На странице DSHS нет расписания занятий и порядка записи. Обратитесь в местное агентство по расселению или общественную организацию или позвоните в офис DSHS и уточните, нужен ли тест на уровень и бесплатен ли курс.",
+     "Английский помогает с поиском работы, экзаменом по вождению и другими шагами, поэтому стоит начать рано."
+    ]
+   },
+   "pattern": "lines"
+  },
+  {
+   "id": "green-card-in-country-memo",
+   "date": "2026-05-25",
+   "tag": "Green card",
+   "layout": "centered",
+   "art": "card",
+   "accent": "#7A1F2B",
+   "sources": [
+    {
+     "name": "Vilni Media, USCIS tightens green card rules for Ukrainians",
+     "url": "https://vilni-media.com/en/2026/05/25/uscis-posyliuie-pravyla-otrymannia-hrin-kart-shcho-tse-znachyt-dlia-ukraintsiv-u-ssha/"
+    },
+    {
+     "name": "Ukraine Immigration Task Force, green cards",
+     "url": "https://ukrainetaskforce.org/tag/green-cards/"
+    }
+   ],
+   "en": {
+    "title": "USCIS limits green card applications filed inside the U.S.",
+    "summary": "A May 2026 policy memo asks most temporary visa holders to apply for a green card through a consulate abroad.",
+    "body": [
+     "A USCIS policy memo dated May 21, 2026 limits green card applications filed inside the United States, called adjustment of status. Most people on temporary visas must now apply through a U.S. consulate abroad, unless extraordinary circumstances apply.",
+     "Adjustment of status is a discretionary benefit, not a guaranteed right. The memo says that violating the conditions of stay, or trying to avoid the consular process, counts against an applicant.",
+     "Uniting for Ukraine (U4U) applications for new arrivals were suspended in January 2025, so there is no automatic route from U4U to a green card. Some lawyers argue the war may count as an extraordinary circumstance, but USCIS decides each case."
+    ],
+    "facts": [
+     "Memo date: May 21, 2026",
+     "Mainly affects temporary visa holders",
+     "Adjustment of status is decided case by case",
+     "Talk to an immigration attorney before filing anything"
+    ]
+   },
+   "uk": {
+    "title": "USCIS обмежує подання на грін-карту всередині США",
+    "summary": "Політичний меморандум від травня 2026 року просить більшість тимчасових віз подавати заяву на грін-карту через консульство за кордоном.",
+    "body": [
+     "Меморандум USCIS від 21 травня 2026 року обмежує подання на грін-карту всередині США, так звана зміна статусу (adjustment of status). Більшість людей з тимчасовими візами тепер мають подавати через консульство США за кордоном, якщо немає надзвичайних обставин.",
+     "Зміна статусу є дискреційною перевагою, а не гарантованим правом. У меморандумі сказано, що порушення умов перебування або спроба уникнути консульського процесу буде враховуватись проти заявника.",
+     "Подання за програмою Uniting for Ukraine (U4U) для нових прибулих призупинили у січні 2025 року, тож автоматичного шляху від U4U до грін-карти немає. Деякі юристи вважають, що війна може бути надзвичайною обставиною, але USCIS вирішує кожен випадок окремо."
+    ],
+    "facts": [
+     "Дата меморандуму: 21 травня 2026 року",
+     "Здебільшого стосується тимчасових віз",
+     "Зміна статусу вирішується в кожному випадку окремо",
+     "Перед будь-якою подачею поговоріть з імміграційним адвокатом"
+    ]
+   },
+   "ru": {
+    "title": "USCIS ограничивает подачу на грин-карту внутри США",
+    "summary": "Меморандум от мая 2026 года просит большинство держателей временных виз подавать заявление на грин-карту через консульство за рубежом.",
+    "body": [
+     "Меморандум USCIS от 21 мая 2026 года ограничивает подачу на грин-карту внутри США, так называемая смена статуса (adjustment of status). Большинство людей с временными визами теперь должны подавать через консульство США за рубежом, если нет исключительных обстоятельств.",
+     "Смена статуса является дискреционной льготой, а не гарантированным правом. В меморандуме сказано, что нарушение условий пребывания или попытка обойти консульский процесс будет учитываться против заявителя.",
+     "Подача по программе Uniting for Ukraine (U4U) для новых прибывших приостановлена с января 2025 года, поэтому автоматического пути от U4U к грин-карте нет. Некоторые юристы считают, что война может быть исключительным обстоятельством, но USCIS решает каждый случай отдельно."
+    ],
+    "facts": [
+     "Дата меморандума: 21 мая 2026 года",
+     "В основном касается держателей временных виз",
+     "Смена статуса решается в каждом случае отдельно",
+     "Перед любой подачей поговорите с иммиграционным адвокатом"
+    ]
+   },
+   "pattern": "grid"
+  },
+  {
+   "id": "ssn-humanitarian-parole",
+   "date": "2026-11-01",
+   "tag": "Documents",
+   "layout": "steps",
+   "art": "doc",
+   "accent": "#2F5D8A",
+   "pattern": "lines",
+   "sources": [
+    {
+     "name": "Ukraine Immigration Task Force, FAQ on SSN with humanitarian parole",
+     "url": "https://ukrainetaskforce.org/ufaq/may-i-apply-for-a-social-security-number-with-humanitarian-parole/"
+    }
+   ],
+   "en": {
+    "title": "Social Security number for humanitarian parolees: how to apply",
+    "summary": "Parolees can apply directly at a Social Security office or through the work permit form. Some get only a non-work number.",
+    "body": [
+     "Print Form SS-5 from ssa.gov and fill it out. Find your nearest office at secure.ssa.gov.",
+     "Bring your passport, Form I-94, and birth certificate. A marriage certificate is needed if it applies to you, and translations of any documents must be prepared in advance.",
+     "If you only have an I-94 or a parole stamp in your passport, you can apply only for a non-work number.",
+     "You can also apply through Form I-765, the work permit application. Check boxes 14 and 15 to receive a Social Security card. This works even if you already have a non-work number.",
+     "Some offices ask for an appointment in advance, so call before you go."
+    ]
+   },
+   "uk": {
+    "title": "Номер соціального страхування для гуманітарних паролів: як подати заяву",
+    "summary": "Паролі можуть подати заяву безпосередньо в офісі Social Security або через заяву на робочий дозвіл. Деякі отримують лише номер без права роботи.",
+    "body": [
+     "Роздрукуйте форму SS-5 з сайту ssa.gov і заповніть її. Найближчий офіс знайдете на secure.ssa.gov.",
+     "Візьміть паспорт, форму I-94 і свідоцтво про народження. Свідоцтво про шлюб потрібне, якщо він стосується вас, а переклади документів краще підготувати заздалегідь.",
+     "Якщо у вас є лише I-94 або відмітка про паролі в паспорті, можна подати заяву тільки на номер без права роботи.",
+     "Також можна подати через форму I-765, заяву на робочий дозвіл. Позначте пункти 14 і 15, щоб отримати картку соціального страхування. Це працює, навіть якщо номер без права роботи вже є.",
+     "В деяких офісах потрібен попередній запис, тож телефонуйте перед візитом."
+    ]
+   },
+   "ru": {
+    "title": "Номер социального страхования для гуманитарных парольных: как подать заявление",
+    "summary": "Парольные могут подать заявление напрямую в офисе Social Security или через заявление на рабочее разрешение. Некоторые получают только номер без права работы.",
+    "body": [
+     "Распечатайте форму SS-5 с сайта ssa.gov и заполните ее. Ближайший офис найдете на secure.ssa.gov.",
+     "Возьмите паспорт, форму I-94 и свидетельство о рождении. Свидетельство о браке нужно, если оно относится к вам, а переводы документов лучше подготовить заранее.",
+     "Если у вас есть только I-94 или отметка о парол в паспорте, можно подать заявление только на номер без права работы.",
+     "Также можно подать через форму I-765, заявление на рабочее разрешение. Отметьте пункты 14 и 15, чтобы получить карточку социального страхования. Это работает, даже если номер без права работы уже есть.",
+     "В некоторых офисах нужна запись заранее, поэтому звоните перед визитом."
+    ]
+   }
+  },
+  {
+   "id": "oregon-health-plan-changes",
+   "date": "2026-11-01",
+   "tag": "Health",
+   "layout": "columns",
+   "art": "card",
+   "accent": "#B03A48",
+   "pattern": "grid",
+   "sources": [
+    {
+     "name": "Oregon Health Authority, October Non-Citizen Changes (updated September 1, 2026)",
+     "url": "https://www.oregon.gov/oha/HSD/OHP/Tools/Non-Citizen-Changes-EN.pdf"
+    }
+   ],
+   "en": {
+    "title": "Oregon Health Plan changes for parolees: October 2026 and January 2027",
+    "summary": "Some Ukrainian parolees move to the Healthier Oregon program on October 1, 2026. Providers may change on January 1, 2027.",
+    "body": [
+     "The Oregon Health Authority notice lists Ukrainians granted parole from February 24, 2022 through September 30, 2024 among the groups moving to Healthier Oregon. Humanitarian parolees with a parole of at least one year are also affected.",
+     "On October 1, 2026, about 7,000 adults move from their current OHP category to Healthier Oregon. Per the notice, they keep their OHP coverage and no action is needed for that move.",
+     "On January 1, 2027, all Healthier Oregon members move from Coordinated Care Organizations to the OHP Open Card. Covered benefits stay the same, but the list of providers may change.",
+     "Before January 1, check whether your doctor accepts the OHP Open Card. Use the provider search at OHPOpenCard.org. Keep your details current at Benefits.Oregon.gov or call 800-699-9075."
+    ]
+   },
+   "uk": {
+    "title": "Зміни в Oregon Health Plan для паролів: жовтень 2026 і січень 2027",
+    "summary": "Частина українських паролів переходить до програми Healthier Oregon 1 жовтня 2026 року. Лікарі можуть змінитися з 1 січня 2027 року.",
+    "body": [
+     "Повідомлення Oregon Health Authority серед груп, що переходять до Healthier Oregon, називає українців з паролем, виданим з 24 лютого 2022 року по 30 вересня 2024 року. Під дію потрапляють також гуманітарні пароли з терміном щонайменше один рік.",
+     "1 жовтня 2026 року близько 7 000 дорослих переходять з поточної категорії OHP до Healthier Oregon. За повідомленням, покриття OHP зберігається, і для цього переходу нічого робити не потрібно.",
+     "1 січня 2027 року всі учасники Healthier Oregon переходять з координованих організацій догляду (CCO) до OHP Open Card. Перелік покритих послуг не змінюється, але список лікарів може змінитися.",
+     "До 1 січня перевірте, чи приймає ваш лікар OHP Open Card. Пошук лікарів доступний на OHPOpenCard.org. Оновлюйте свої дані на Benefits.Oregon.gov або телефонуйте 800-699-9075."
+    ]
+   },
+   "ru": {
+    "title": "Изменения в Oregon Health Plan для парольных: октябрь 2026 и январь 2027",
+    "summary": "Часть украинских парольных переходит в программу Healthier Oregon 1 октября 2026 года. Врачи могут измениться с 1 января 2027 года.",
+    "body": [
+     "Уведомление Oregon Health Authority среди групп, переходящих в Healthier Oregon, называет украинцев с парол, выданным с 24 февраля 2022 года по 30 сентября 2024 года. Под действие попадают также гуманитарные парол сроком не менее одного года.",
+     "1 октября 2026 года около 7 000 взрослых переходят из текущей категории OHP в Healthier Oregon. По уведомлению, покрытие OHP сохраняется, и для этого перехода ничего делать не нужно.",
+     "1 января 2027 года все участники Healthier Oregon переходят из координированных организаций (CCO) в OHP Open Card. Перечень покрываемых услуг не меняется, но список врачей может измениться.",
+     "До 1 января проверьте, принимает ли ваш врач OHP Open Card. Поиск врачей есть на OHPOpenCard.org. Обновляйте данные на Benefits.Oregon.gov или звоните 800-699-9075."
+    ]
+   }
+  },
+  {
+   "id": "wa-apple-health-ukraine",
+   "date": "2026-11-01",
+   "tag": "Health",
+   "layout": "facts",
+   "art": "passport",
+   "accent": "#2D6A9F",
+   "pattern": "dots",
+   "sources": [
+    {
+     "name": "Washington Health Care Authority, Apple Health for individuals from Ukraine (dated October 18, 2024)",
+     "url": "https://www.hca.wa.gov/assets/free-or-low-cost/apple-health-for-individuals-from-ukraine.pdf"
+    }
+   ],
+   "en": {
+    "title": "Apple Health in Washington for Ukrainians: who qualifies",
+    "summary": "Coverage depends on the parole or TPS status and its date. The Health Care Authority lists the groups and how to apply.",
+    "body": [
+     "Ukrainian humanitarian parolees granted parole from February 24, 2022 through September 30, 2024 can get children, pregnancy, and adult medical coverage. Parolees who came before February 24, 2022 get children, pregnancy, and aged, blind, or disabled coverage, but not adult medical.",
+     "People with TPS can get children, pregnancy, and aged, blind, or disabled coverage. They must have been in the U.S. continuously since April 19, 2022.",
+     "People who were paroled from February 24, 2022 through September 30, 2024 and later got TPS keep full Apple Health through September 30, 2024, or the end of their parole, whichever is later.",
+     "If you lose Apple Health, you may qualify for up to 12 months of other programs or a plan with help on premiums through Washington Healthplanfinder."
+    ],
+    "facts": [
+     "Parole Feb 24, 2022 to Sep 30, 2024: children, pregnancy and adult medical",
+     "TPS: children, pregnancy and aged, blind, or disabled coverage",
+     "Under 65: wahealthplanfinder.org or 1-855-923-4633",
+     "65 and older, blind, or disabled: washingtonconnection.org or 1-877-501-2233"
+    ]
+   },
+   "uk": {
+    "title": "Apple Health у Вашингтоні для українців: хто має право",
+    "summary": "Право залежить від статусу паролю чи TPS і дати. Health Care Authority перелічує групи та пояснює, як подати заяву.",
+    "body": [
+     "Українці з гуманітарним паролем, виданим з 24 лютого 2022 року по 30 вересня 2024 року, можуть отримати покриття для дітей, вагітних і дорослу медичну допомогу. Паролі, видані до 24 лютого 2022 року, отримують покриття для дітей, вагітних і для людей похилого віку, незрячих або з інвалідністю, але без дорослої медичної допомоги.",
+     "Люди з TPS можуть отримати покриття для дітей, вагітних і для людей похилого віку, незрячих або з інвалідністю. Вони мають безперервно перебувати в США з 19 квітня 2022 року.",
+     "Ті, кому видали пароль з 24 лютого 2022 року по 30 вересня 2024 року, а згодом TPS, зберігають повний Apple Health до 30 вересня 2024 року або до кінця дії паролю, залежно від того, що пізніше.",
+     "Якщо ви втратите Apple Health, можете мати право на інші програми до 12 місяців або на план із допомогою у сплаті премій через Washington Healthplanfinder."
+    ],
+    "facts": [
+     "Пароль з 24 лютого 2022 до 30 вересня 2024: діти, вагітні і дорослі",
+     "TPS: діти, вагітні, а також люди похилого віку, незрячі чи з інвалідністю",
+     "До 65 років: wahealthplanfinder.org або 1-855-923-4633",
+     "65 років і старше, незрячі чи з інвалідністю: washingtonconnection.org або 1-877-501-2233"
+    ]
+   },
+   "ru": {
+    "title": "Apple Health в Вашингтоне для украинцев: кто имеет право",
+    "summary": "Право зависит от статуса парол или TPS и даты. Health Care Authority перечисляет группы и объясняет, как подать заявление.",
+    "body": [
+     "Украинцы с гуманитарным парол, выданным с 24 февраля 2022 года по 30 сентября 2024 года, могут получить покрытие для детей, беременных и взрослую медицинскую помощь. Парольные, выданные до 24 февраля 2022 года, получают покрытие для детей, беременных и для пожилых, слепых или с инвалидностью, но без взрослой медицинской помощи.",
+     "Люди с TPS могут получить покрытие для детей, беременных и для пожилых, слепых или с инвалидностью. Они должны непрерывно находиться в США с 19 апреля 2022 года.",
+     "Те, кому выдали парол с 24 февраля 2022 года по 30 сентября 2024 года, а затем TPS, сохраняют полный Apple Health до 30 сентября 2024 года или до конца действия парол, в зависимости от того, что позже.",
+     "Если вы потеряете Apple Health, можете иметь право на другие программы до 12 месяцев или на план с помощью в оплате премий через Washington Healthplanfinder."
+    ],
+    "facts": [
+     "Парole с 24 февраля 2022 по 30 сентября 2024: дети, беременные и взрослые",
+     "TPS: дети, беременные, а также пожилые, слепые или с инвалидностью",
+     "До 65 лет: wahealthplanfinder.org или 1-855-923-4633",
+     "65 лет и старше, слепые или с инвалидностью: washingtonconnection.org или 1-877-501-2233"
+    ]
+   }
+  },
+  {
+   "id": "portland-free-legal-help",
+   "date": "2026-11-01",
+   "tag": "Legal help",
+   "layout": "brief",
+   "art": "globe",
+   "accent": "#14304F",
+   "pattern": "waves",
+   "sources": [
+    {
+     "name": "City of Portland, free legal services for immigrants",
+     "url": "https://www.portland.gov/civic/immigrants/free-legal-services"
+    },
+    {
+     "name": "Portland Community College, SOAR Immigration Legal Services intake",
+     "url": "https://form.jotform.com/251256212046043"
+    },
+    {
+     "name": "Equity Corps of Oregon",
+     "url": "https://equitycorps.org/eco/"
+    },
+    {
+     "name": "Oregon Law Help",
+     "url": "https://oregonlawhelp.org/Search-for-lawyers-legal-help"
+    }
+   ],
+   "en": {
+    "title": "Free and low-cost immigration legal help in Portland",
+    "summary": "The City of Portland lists free clinics and volunteer lawyers. Start with an intake form, and call 311 if you need help choosing.",
+    "body": [
+     "The Portland Community College immigration clinic offers free legal help through its SOAR program. Apply through its online intake form.",
+     "Equity Corps of Oregon connects people with free help from local lawyers and law firms. Portland Immigrant Rights Coalition also offers help and legal support.",
+     "For a private lawyer at a lower cost, Oregon Law Help lists low-cost lawyers and legal help across the state. The Oregon Immigration Legal Services Directory helps you find an immigration lawyer.",
+     "The City of Portland says you can call 503-823-4000 or dial 311 for general help. Be careful with anyone who promises a fast green card or charges a large fee up front."
+    ]
+   },
+   "uk": {
+    "title": "Безкоштовна та недорога імміграційна правова допомога в Портленді",
+    "summary": "Місто Портленд перелічує безкоштовні клініки та волонтерських юристів. Почніть з анкети, а якщо потрібна допомога з вибором, зателефонуйте за номером 311.",
+    "body": [
+     "Імміграційна клініка Portland Community College пропонує безкоштовну правову допомогу через програму SOAR. Подайте заявку через онлайн-анкету.",
+     "Equity Corps of Oregon з'єднує людей з безкоштовною допомогою місцевих юристів і юридичних фірм. Portland Immigrant Rights Coalition також надає допомогу та юридичну підтримку.",
+     "Для приватного юриста за нижчою ціною Oregon Law Help перелічує недорогих адвокатів і правову допомогу в штаті. Довідник імміграційних юридичних послуг Орегону допоможе знайти імміграційного адвоката.",
+     "Місто Портленд радить телефонувати за номером 503-823-4000 або набрати 311 для загальної допомоги. Остерігайтесь тих, хто обіцяє швидку грін-карту або бере велику передоплату."
+    ]
+   },
+   "ru": {
+    "title": "Бесплатная и недорогая иммиграционная правовая помощь в Портленде",
+    "summary": "Город Портленд перечисляет бесплатные клиники и волонтерских юристов. Начните с анкеты, а если нужна помощь с выбором, звоните по номеру 311.",
+    "body": [
+     "Иммиграционная клиника Portland Community College предлагает бесплатную правовую помощь через программу SOAR. Подайте заявку через онлайн-анкету.",
+     "Equity Corps of Oregon связывает людей с бесплатной помощью местных юристов и юридических фирм. Portland Immigrant Rights Coalition также оказывает помощь и правовую поддержку.",
+     "Для частного юриста по более низкой цене Oregon Law Help перечисляет недорогих адвокатов и правовую помощь по штату. Справочник иммиграционных юридических услуг Орегона поможет найти иммиграционного адвоката.",
+     "Город Портленд советует звонить по номеру 503-823-4000 или набрать 311 для общей помощи. Остерегайтесь тех, кто обещает быструю грин-карту или берет большую предоплату."
+    ]
+   }
+  },
+  {
+   "id": "seattle-legal-help",
+   "date": "2026-11-01",
+   "tag": "Legal help",
+   "layout": "centered",
+   "art": "book",
+   "accent": "#8C5A1E",
+   "pattern": "grid",
+   "sources": [
+    {
+     "name": "ImmigrationLawHelp.org, Northwest Immigrant Rights Project, Seattle",
+     "url": "https://www.immigrationlawhelp.org/organization.393434-Northwest_Immigrant_Rights_Project_Seattle_Office"
+    },
+    {
+     "name": "ImmigrationLawHelp.org, Ukrainian Community Center of Washington, Seattle",
+     "url": "https://www.immigrationlawhelp.org/organization.393426"
+    }
+   ],
+   "en": {
+    "title": "Immigration legal help in Seattle and King County",
+    "summary": "Two organizations with Ukrainian and Russian speakers offer legal help. One charges a nominal fee, the other is free or low-cost.",
+    "body": [
+     "The Ukrainian Community Center of Washington in Seattle serves King, Pierce, and Snohomish counties. It helps with adjustment of status, work permits, family petitions, citizenship, and U visas. Its services are free or low-cost, with a nominal fee. Staff speak English, Russian, and Ukrainian. Call (425) 430-8229 or write to info@uccwa.org.",
+     "Northwest Immigrant Rights Project in Seattle, at 615 2nd Avenue, Suite 400, helps with TPS, asylum, adjustment of status, and naturalization, among other matters. It charges a nominal fee. Call (206) 587-4009 or 1-800-445-5771.",
+     "Both organizations accept appointments. Before you go, write down your status, your dates, and your questions, and bring all of your immigration papers."
+    ]
+   },
+   "uk": {
+    "title": "Імміграційна правова допомога в Сіетлі та окрузі Кінг",
+    "summary": "Дві організації з українськомовними та російськомовними працівниками надають правову допомогу. Одна бере символічну плату, інша безкоштовна або недорога.",
+    "body": [
+     "Ukrainian Community Center of Washington у Сіетлі обслуговує округи Кінг, Пірс і Сноховіш. Вона допомагає зі зміною статусу, робочими дозволами, сімейними петиціями, громадянством і візами U. Послуги безкоштовні або недорогі, з символічною платою. Працівники говорять англійською, російською та українською. Телефон (425) 430-8229, пошта info@uccwa.org.",
+     "Northwest Immigrant Rights Project у Сіетлі, за адресою 615 2nd Avenue, Suite 400, допомагає з TPS, притулком, зміною статусу та натуралізацією. Бере символічну плату. Телефон (206) 587-4009 або 1-800-445-5771.",
+     "Обидві організації приймають за записом. Перед візитом запишіть свій статус, дати та питання і візьміть усі імміграційні документи."
+    ]
+   },
+   "ru": {
+    "title": "Иммиграционная правовая помощь в Сиэтле и округе Кинг",
+    "summary": "Две организации с русско- и украиноговорящими сотрудниками оказывают правовую помощь. Одна берет символическую плату, другая бесплатна или недорога.",
+    "body": [
+     "Ukrainian Community Center of Washington в Сиэтле обслуживает округа Кинг, Пирс и Сноховиш. Помогает со сменой статуса, рабочими разрешениями, семейными петициями, гражданством и визами U. Услуги бесплатные или недорогие, с символической платой. Сотрудники говорят по-английски, по-русски и по-украински. Телефон (425) 430-8229, почта info@uccwa.org.",
+     "Northwest Immigrant Rights Project в Сиэтле, по адресу 615 2nd Avenue, Suite 400, помогает с TPS, убежищем, сменой статуса и натурализацией. Берет символическую плату. Телефон (206) 587-4009 или 1-800-445-5771.",
+     "Обе организации принимают по записи. Перед визитом запишите свой статус, даты и вопросы и возьмите все иммиграционные документы."
+    ]
    }
   }
- ]
+ ],
+ "nav": {
+  "en": [
+   [
+    "Home",
+    "home-test.html#top"
+   ],
+   [
+    "Services",
+    "home-test.html#services"
+   ],
+   [
+    "How it works",
+    "home-test.html#how"
+   ],
+   [
+    "Details",
+    "home-test.html#details"
+   ],
+   [
+    "Reviews",
+    "home-test.html#reviews"
+   ],
+   [
+    "Contacts",
+    "home-test.html#contact"
+   ]
+  ],
+  "uk": [
+   [
+    "Головна",
+    "home-test.html#top"
+   ],
+   [
+    "Послуги",
+    "home-test.html#services"
+   ],
+   [
+    "Як це працює",
+    "home-test.html#how"
+   ],
+   [
+    "Деталі",
+    "home-test.html#details"
+   ],
+   [
+    "Відгуки",
+    "home-test.html#reviews"
+   ],
+   [
+    "Контакти",
+    "home-test.html#contact"
+   ]
+  ],
+  "ru": [
+   [
+    "Главная",
+    "home-test.html#top"
+   ],
+   [
+    "Услуги",
+    "home-test.html#services"
+   ],
+   [
+    "Как это работает",
+    "home-test.html#how"
+   ],
+   [
+    "Детали",
+    "home-test.html#details"
+   ],
+   [
+    "Отзывы",
+    "home-test.html#reviews"
+   ],
+   [
+    "Контакты",
+    "home-test.html#contact"
+   ]
+  ]
+ }
 }
