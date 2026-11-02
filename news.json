@@ -1,0 +1,250 @@
+{
+ "updated": "2026-11-01",
+ "disclaimer": {
+  "en": "General information from public sources, not legal advice. Check the linked source and consult an attorney for your own case.",
+  "uk": "Загальна інформація з відкритих джерел, не юридична порада. Перевіряйте першоджерело за посиланням і звертайтесь до адвоката щодо власного випадку.",
+  "ru": "Общая информация из открытых источников, не юридический совет. Проверяйте первоисточник по ссылке и обращайтесь к адвокату по своему случаю."
+ },
+ "ui": {
+  "en": {
+   "title": "News for newcomers",
+   "all": "All news",
+   "back": "Back to news",
+   "home": "Home",
+   "source": "Sources",
+   "updated": "Updated",
+   "more": "Read"
+  },
+  "uk": {
+   "title": "Новини для новоприбулих",
+   "all": "Усі новини",
+   "back": "Назад до новин",
+   "home": "На головну",
+   "source": "Джерела",
+   "updated": "Оновлено",
+   "more": "Читати"
+  },
+  "ru": {
+   "title": "Новости для приезжих",
+   "all": "Все новости",
+   "back": "Назад к новостям",
+   "home": "На главную",
+   "source": "Источники",
+   "updated": "Обновлено",
+   "more": "Читать"
+  }
+ },
+ "items": [
+  {
+   "id": "tps-ukraine-after-oct-19",
+   "date": "2026-10-20",
+   "tag": "TPS",
+   "sources": [
+    {
+     "name": "USCIS, TPS Ukraine",
+     "url": "https://www.uscis.gov/humanitarian/temporary-protected-status/TPS-Ukraine"
+    },
+    {
+     "name": "Texas legal aid article on Ukraine and Sudan TPS",
+     "url": "https://txlrs.org/blog-post/texas-ukraine-sudan-tps-automatic-extension-october-2026"
+    },
+    {
+     "name": "Immigration law firm article on the missed DHS deadline",
+     "url": "https://www.gmlaw.com/news/dhs-fails-to-make-official-determination-on-tps-for-sudan-and-ukraine/"
+    }
+   ],
+   "en": {
+    "title": "Ukraine TPS: no published decision after October 19",
+    "summary": "The USCIS page lists October 19, 2026 as the end of the current Ukraine TPS designation. Legal organizations report that as of October 20 DHS had published no decision to extend or end it.",
+    "body": [
+     "The USCIS page for Ukraine TPS lists October 19, 2026 as the end of the current designation.",
+     "As of October 20, legal organizations report that DHS has published no notice that extends, redesignates or ends Ukraine TPS. USCIS has said an announcement will be made later, and that Ukrainians with TPS keep their protection and work authorization until then.",
+     "Some lawyers read the law as an automatic six-month extension when no timely decision is made. The administration has not confirmed this reading, and work permit dates on cards are not updated automatically.",
+     "Everyone's case is different. For your own situation, ask an immigration attorney or a DOJ accredited representative."
+    ]
+   },
+   "uk": {
+    "title": "TPS для України: після 19 жовтня офіційного рішення немає",
+    "summary": "На сторінці USCIS кінець чинного TPS для України вказаний як 19 жовтня 2026 року. За даними юридичних організацій, станом на 20 жовтня DHS не опублікував рішення ні про продовження, ні про завершення.",
+    "body": [
+     "На сторінці USCIS про TPS для України кінець чинного періоду вказаний як 19 жовтня 2026 року.",
+     "Станом на 20 жовтня юридичні організації повідомляють, що DHS не опублікував повідомлення про продовження, нове призначення чи завершення TPS для України. USCIS заявила, що оголошення буде пізніше, а українці з TPS до того часу зберігають захист і дозвіл на роботу.",
+     "Частина юристів читає закон так, що за відсутності вчасного рішення настає автоматичне продовження на шість місяців. Адміністрація цього не підтвердила, а дати на картках дозволу на роботу автоматично не змінюються.",
+     "Кожна ситуація індивідуальна. Щодо вашого випадку звертайтесь до імміграційного адвоката або акредитованого представника."
+    ]
+   },
+   "ru": {
+    "title": "TPS для Украины: после 19 октября официального решения нет",
+    "summary": "На странице USCIS конец действующего TPS для Украины указан как 19 октября 2026 года. По данным юридических организаций, на 20 октября DHS не опубликовал решение ни о продлении, ни о прекращении.",
+    "body": [
+     "На странице USCIS о TPS для Украины конец действующего периода указан как 19 октября 2026 года.",
+     "По состоянию на 20 октября юридические организации сообщают, что DHS не опубликовал уведомление о продлении, новом назначении или прекращении TPS для Украины. USCIS заявила, что объявление будет позже, а украинцы с TPS до этого сохраняют защиту и разрешение на работу.",
+     "Часть юристов читает закон так, что при отсутствии своевременного решения наступает автоматическое продление на шесть месяцев. Администрация этого не подтвердила, а даты на карточках разрешения на работу автоматически не меняются.",
+     "У каждого своя ситуация. По вашему случаю обращайтесь к иммиграционному адвокату или аккредитованному представителю."
+    ]
+   }
+  },
+  {
+   "id": "fees-hr1-rule",
+   "date": "2026-04-29",
+   "tag": "Fees",
+   "sources": [
+    {
+     "name": "Federal Register, USCIS fees required by H.R.1",
+     "url": "https://www.federalregister.gov/documents/2026/04/29/2026-08333/uscis-immigration-fees-and-related-procedures-required-by-hr1-reconciliation-bill"
+    },
+    {
+     "name": "Ukraine Immigration Task Force, legal updates",
+     "url": "https://ukrainetaskforce.org/category/news/"
+    }
+   ],
+   "en": {
+    "title": "New USCIS fees under the H.R.1 rule",
+    "summary": "A USCIS interim final rule, published April 29, 2026 and effective May 29, 2026, sets new fees. They include at least $100 for an asylum application and at least $100 each year it stays pending.",
+    "body": [
+     "The Federal Register rule took effect on May 29, 2026.",
+     "Asylum application: a fee of at least $100, paid at filing, non-refundable. Annual asylum fee: at least $100 for each calendar year the application stays pending. Missing the payment after the 30-day window can lead to rejection and the loss of related work permit eligibility.",
+     "Form I-94 fee for Form I-102 filings: at least $24 added to the regular fee.",
+     "TPS-related work permits carry statutory fees that cannot be waived, and a work permit is limited to one year or the remaining designation period, whichever is shorter.",
+     "A legal aid organization also reports a $1,000 fee for grants of parole, announced in October 2025. Check the current form instructions before filing."
+    ]
+   },
+   "uk": {
+    "title": "Нові збори USCIS за правилом H.R.1",
+    "summary": "Тимчасове остаточне правило USCIS, опубліковане 29 квітня 2026 року і чинне з 29 травня 2026 року, встановлює нові збори. Серед них щонайменше $100 за заяву на притулок і щонайменше $100 щороку, поки вона розглядається.",
+    "body": [
+     "Правило у Federal Register набуло чинності 29 травня 2026 року.",
+     "Заява на притулок: збір щонайменше $100, сплачується під час подання, не повертається. Щорічний збір за притулок: щонайменше $100 за кожен календарний рік, поки заява розглядається. Несплата після 30-денного періоду може призвести до відмови в прийнятті та втрати права на повʼязаний дозвіл на роботу.",
+     "Збір за форму I-94 для заяв за формою I-102: щонайменше $24 додатково до звичайного збору.",
+     "Дозволи на роботу за TPS мають збори, визначені законом, їх неможливо скасувати, а сам дозвіл обмежений одним роком або залишком періоду TPS, залежно від того, що коротше.",
+     "Юридична організація також повідомляє про збір $1,000 за надання parole, оголошений у жовтні 2025 року. Перед поданням перевіряйте актуальні інструкції до форм."
+    ]
+   },
+   "ru": {
+    "title": "Новые сборы USCIS по правилу H.R.1",
+    "summary": "Временное окончательное правило USCIS, опубликованное 29 апреля 2026 года и действующее с 29 мая 2026 года, вводит новые сборы. Среди них не менее $100 за заявление на убежище и не менее $100 каждый год, пока оно рассматривается.",
+    "body": [
+     "Правило в Federal Register вступило в силу 29 мая 2026 года.",
+     "Заявление на убежище: сбор не менее $100, платится при подаче, не возвращается. Ежегодный сбор за убежище: не менее $100 за каждый календарный год, пока заявление рассматривается. Неуплата после 30-дневного периода может привести к отказу в приёме и потере права на связанное разрешение на работу.",
+     "Сбор за форму I-94 для заявлений по форме I-102: не менее $24 сверх обычного сбора.",
+     "Разрешения на работу по TPS имеют сборы, установленные законом, их нельзя отменить, а само разрешение ограничено одним годом или остатком периода TPS, смотря что короче.",
+     "Юридическая организация также сообщает о сборе $1,000 за предоставление parole, объявленном в октябре 2025 года. Перед подачей проверяйте актуальные инструкции к формам."
+    ]
+   }
+  },
+  {
+   "id": "i94-uhp-work-proof",
+   "date": "2026-08-20",
+   "tag": "Work permit",
+   "sources": [
+    {
+     "name": "Ukraine Immigration Task Force, legal updates",
+     "url": "https://ukrainetaskforce.org/category/news/"
+    }
+   ],
+   "en": {
+    "title": "Waiting for a new work permit after re-parole: the I-94 may help",
+    "summary": "A legal aid update from August 20, 2026 says parolees waiting for a new work permit card after a final re-parole grant may be able to show an unexpired I-94 with class of admission UHP for up to 90 days.",
+    "body": [
+     "Ukrainian parolees who have received a final re-parole grant and are waiting for the new work permit card may be able to use their unexpired I-94, with class of admission UHP, as proof for the employer for up to 90 days.",
+     "This comes from a legal aid organization update, not from a new government form. Employers follow USCIS I-9 guidance, so ask them to check the current I-9 instructions.",
+     "For your own case, ask an immigration attorney or accredited representative."
+    ]
+   },
+   "uk": {
+    "title": "Чекаєте нову картку дозволу на роботу після re-parole: може допомогти I-94",
+    "summary": "За оновленням юридичної організації від 20 серпня 2026 року, особи з parole, які чекають нову картку дозволу на роботу після остаточного рішення про re-parole, можуть показувати чинний I-94 з класом допуску UHP до 90 днів.",
+    "body": [
+     "Українці з parole, які отримали остаточне рішення про re-parole і чекають нову картку дозволу на роботу, можуть показувати роботодавцю чинний I-94 з класом допуску UHP як підтвердження до 90 днів.",
+     "Це інформація з оновлення юридичної організації, а не нова урядова форма. Роботодавці користуються настановами USCIS щодо форми I-9, тому попросіть їх перевірити актуальну інструкцію I-9.",
+     "Щодо вашого випадку звертайтесь до імміграційного адвоката або акредитованого представника."
+    ]
+   },
+   "ru": {
+    "title": "Ждёте новую карточку разрешения на работу после re-parole: может помочь I-94",
+    "summary": "Согласно обновлению юридической организации от 20 августа 2026 года, люди с parole, которые ждут новую карточку разрешения на работу после окончательного решения о re-parole, могут показывать действующий I-94 с классом допуска UHP до 90 дней.",
+    "body": [
+     "Украинцы с parole, получившие окончательное решение о re-parole и ожидающие новую карточку разрешения на работу, могут показывать работодателю действующий I-94 с классом допуска UHP как подтверждение до 90 дней.",
+     "Это информация из обновления юридической организации, а не новая правительственная форма. Работодатели следуют указаниям USCIS по форме I-9, поэтому попросите их проверить актуальную инструкцию I-9.",
+     "По вашему случаю обращайтесь к иммиграционному адвокату или аккредитованному представителю."
+    ]
+   }
+  },
+  {
+   "id": "cdl-non-domiciled",
+   "date": "2026-06-11",
+   "tag": "Driving",
+   "sources": [
+    {
+     "name": "Ukraine Immigration Task Force, legal updates",
+     "url": "https://ukrainetaskforce.org/category/news/"
+    }
+   ],
+   "en": {
+    "title": "Commercial driver licenses: a work permit alone is no longer enough",
+    "summary": "A legal aid update from June 11, 2026 reports that a rule effective March 16, 2026 limits non-domiciled commercial licenses and permits to H-2A, H-2B and E-2 visa holders. U4U parolees and TPS holders can no longer apply or renew.",
+    "body": [
+     "According to the legal aid update, a rule effective March 16, 2026 limits non-domiciled commercial driver licenses and commercial learner permits to holders of H-2A, H-2B or E-2 visas.",
+     "Having a work permit alone is no longer sufficient, and U4U parolees and TPS holders can no longer apply or renew these licenses.",
+     "Details can differ by state. If you drive for work, confirm with your state licensing office and ask an attorney about your options."
+    ]
+   },
+   "uk": {
+    "title": "Комерційні водійські права: самого дозволу на роботу вже недостатньо",
+    "summary": "За оновленням юридичної організації від 11 червня 2026 року, правило, чинне з 16 березня 2026 року, обмежує комерційні права для осіб без постійного доміциля категоріями віз H-2A, H-2B і E-2. Особи з U4U parole і TPS більше не можуть подавати заяву чи поновлювати.",
+    "body": [
+     "За оновленням юридичної організації, правило, чинне з 16 березня 2026 року, обмежує комерційні водійські права та навчальні дозволи для осіб без доміциля в штаті власниками віз H-2A, H-2B або E-2.",
+     "Наявності лише дозволу на роботу вже недостатньо, а особи з U4U parole і TPS більше не можуть подавати заяву або поновлювати ці права.",
+     "Деталі можуть відрізнятися залежно від штату. Якщо ви їздите за кермом по роботі, уточніть у відомстві водійських посвідчень вашого штату й запитайте адвоката про варіанти."
+    ]
+   },
+   "ru": {
+    "title": "Коммерческие водительские права: одного разрешения на работу уже недостаточно",
+    "summary": "Согласно обновлению юридической организации от 11 июня 2026 года, правило, действующее с 16 марта 2026 года, ограничивает коммерческие права для лиц без постоянного домициля категориями виз H-2A, H-2B и E-2. Люди с U4U parole и TPS больше не могут подавать заявление или продлевать.",
+    "body": [
+     "Согласно обновлению юридической организации, правило, действующее с 16 марта 2026 года, ограничивает коммерческие водительские права и учебные разрешения для лиц без домициля в штате владельцами виз H-2A, H-2B или E-2.",
+     "Одного разрешения на работу уже недостаточно, а люди с U4U parole и TPS больше не могут подавать заявление или продлевать эти права.",
+     "Детали могут отличаться по штатам. Если вы водите по работе, уточните в ведомстве водительских удостоверений вашего штата и спросите адвоката о вариантах."
+    ]
+   }
+  },
+  {
+   "id": "service-ukraine-task-force",
+   "date": "2026-11-01",
+   "tag": "Service",
+   "sources": [
+    {
+     "name": "Ukraine Immigration Task Force, legal updates",
+     "url": "https://ukrainetaskforce.org/category/news/"
+    }
+   ],
+   "en": {
+    "title": "Where to follow legal updates for Ukrainians in the US",
+    "summary": "The Ukraine Immigration Task Force publishes legal updates for Ukrainians in the US on TPS, re-parole, work permits and fees. It is a useful place to check changes in plain language.",
+    "body": [
+     "The Ukraine Immigration Task Force publishes a running list of legal updates on TPS, re-parole, work permits, fees and related topics.",
+     "It is a source to check for changes and to see what legal organizations are reporting. It does not replace official USCIS pages or advice from an attorney.",
+     "Nadiya helps with interpreting and translation for immigration paperwork and USCIS interviews. She is not a lawyer and does not give legal advice."
+    ]
+   },
+   "uk": {
+    "title": "Де стежити за правовими оновленнями для українців у США",
+    "summary": "Ukraine Immigration Task Force публікує правові оновлення для українців у США щодо TPS, re-parole, дозволів на роботу та зборів. Це зручне місце, щоб побачити зміни простою мовою.",
+    "body": [
+     "Ukraine Immigration Task Force веде стрічку правових оновлень щодо TPS, re-parole, дозволів на роботу, зборів та повʼязаних тем.",
+     "Це джерело, де можна перевірити зміни й побачити, що повідомляють юридичні організації. Воно не замінює офіційні сторінки USCIS чи пораду адвоката.",
+     "Надія допомагає з усним і письмовим перекладом для імміграційних документів і співбесід USCIS. Вона не юристка і не дає юридичних порад."
+    ]
+   },
+   "ru": {
+    "title": "Где следить за правовыми обновлениями для украинцев в США",
+    "summary": "Ukraine Immigration Task Force публикует правовые обновления для украинцев в США по TPS, re-parole, разрешениям на работу и сборам. Это удобное место, чтобы увидеть изменения простым языком.",
+    "body": [
+     "Ukraine Immigration Task Force ведёт ленту правовых обновлений по TPS, re-parole, разрешениям на работу, сборам и связанным темам.",
+     "Это источник, где можно проверить изменения и увидеть, что сообщают юридические организации. Он не заменяет официальные страницы USCIS или совет адвоката.",
+     "Надежда помогает с устным и письменным переводом для иммиграционных документов и собеседований USCIS. Она не юрист и не даёт юридических советов."
+    ]
+   }
+  }
+ ]
+}
