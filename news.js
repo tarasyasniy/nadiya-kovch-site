@@ -1,7 +1,7 @@
 (function(){
   var D=null, UID=0;
   function lang(){var l="en";try{l=localStorage.getItem("nk-lang")||"";}catch(e){}
-    if(l!=="en"&&l!=="uk"&&l!=="ru"){var n=(navigator.language||"en").slice(0,2);l=n==="uk"?"uk":n==="ru"?"ru":"en";}return l;}
+    if(l!=="en"&&l!=="uk"&&l!=="ru"){l="uk";}return l;}
   function setLang(l){try{localStorage.setItem("nk-lang",l);}catch(e){}}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
   function fmt(d,l){try{return new Date(d+"T12:00:00").toLocaleDateString(l==="uk"?"uk-UA":l==="ru"?"ru-RU":"en-US",{year:"numeric",month:"long",day:"numeric"});}catch(e){return d;}}
