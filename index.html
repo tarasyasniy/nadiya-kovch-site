@@ -56,6 +56,22 @@ a:hover{color:var(--color-accent-600)}
 .nk-nav a{text-decoration:none;color:var(--color-neutral-700);font-weight:600}
 .nk-nav a:hover{color:var(--color-accent-700)}
 .nk-wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.nk-menu-t{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.nk-burger{display:none}
+@media(max-width:859px){
+ .nk-bar{flex-wrap:wrap !important;height:auto !important;padding-top:10px !important;padding-bottom:10px !important;gap:8px !important}
+ .nk-logo{order:1}
+ .nk-logo img{height:56px !important}
+ .nk-lang{order:2;margin-left:auto;padding:3px !important;gap:2px !important}
+ .nk-lang button{padding:5px 9px !important;font-size:12px !important}
+ .nk-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;order:3;width:42px;height:42px;cursor:pointer}
+ .nk-burger span{display:block;width:22px;height:2px;background:var(--color-text);border-radius:2px}
+ .nk-nav{display:none !important}
+ .nk-menu-t:checked ~ .nk-lang{order:4;width:100%;margin-left:0;justify-content:center;padding:6px !important;margin-top:8px;border-radius:10px}
+ .nk-menu-t:checked ~ .nk-lang button{padding:9px 16px !important;font-size:14px !important}
+ .nk-menu-t:checked ~ .nk-nav{display:flex !important;order:5;width:calc(100% + 44px);flex-direction:column;gap:0 !important;margin:0 -22px;padding:4px 0 !important;border-top:1px solid var(--color-neutral-200)}
+ .nk-nav a{display:block;padding:14px 22px;font-size:17px !important;border-bottom:1px solid var(--color-neutral-200)}
+}
 .nk-h2{font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,4.6vw,44px);line-height:1.1;letter-spacing:-.01em;margin:0 0 12px}
 .nk-sub{color:var(--color-neutral-700);max-width:38em;margin:0 0 40px}
 .nk-sec{padding:80px 0}
@@ -82,10 +98,13 @@ a:hover{color:var(--color-accent-600)}
 </style>
 </helmet>
 <div style="min-height:100vh;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
-<header style="position:sticky;top:0;z-index:10;background:var(--color-bg);border-bottom:1px solid var(--color-neutral-200)">
-  <div class="nk-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;height:100px">
-    <a href="#top" style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;padding:0 14px"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:84px;width:auto;display:block"></a>
-    <nav class="nk-nav" aria-label="Main" style="gap:26px;font-size:15px">
+<header class="nk-hdr" style="position:sticky;top:0;z-index:10;background:var(--color-bg);border-bottom:1px solid var(--color-neutral-200)">
+  <div class="nk-wrap nk-bar" style="display:flex;align-items:center;justify-content:space-between;gap:12px;height:100px">
+    <a class="nk-logo" href="#top" style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;padding:0 14px"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:84px;width:auto;display:block"></a>
+    <input type="checkbox" id="nk-menu-t" class="nk-menu-t" aria-label="Menu">
+    <label for="nk-menu-t" class="nk-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+    <nav class="nk-nav" aria-label="Main" style="gap:26px;font-size:15px" onclick="if(event.target.tagName==='A')document.getElementById('nk-menu-t').checked=false">
+      <a href="#top">{{ t.nav_home }}</a>
       <a href="#services">{{ t.nav_services }}</a>
       <a href="#how">{{ t.nav_how }}</a>
       <a href="#details">{{ t.nav_details }}</a>
@@ -93,7 +112,7 @@ a:hover{color:var(--color-accent-600)}
       <a href="#contact">{{ t.nav_contact }}</a>
       <a href="news.html">{{ t.nav_news }}</a>
     </nav>
-    <div role="group" aria-label="Language" style="display:flex;gap:4px;background:var(--color-accent-2-100);border-radius:999px;padding:4px">
+    <div class="nk-lang" role="group" aria-label="Language" style="display:flex;gap:4px;background:var(--color-accent-2-100);border-radius:999px;padding:4px">
       <button type="button" onClick="{{ setEn }}" aria-pressed="{{ isEn }}" style="cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--font-body);{{ enCss }}">EN</button>
       <button type="button" onClick="{{ setUk }}" aria-pressed="{{ isUk }}" style="cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--font-body);{{ ukCss }}">UA</button>
       <button type="button" onClick="{{ setRu }}" aria-pressed="{{ isRu }}" style="cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--font-body);{{ ruCss }}">RU</button>
@@ -267,7 +286,7 @@ class Component extends DCLogic {
   state = { lang: "uk", sent: false, videoReady: false };
   titles = { en: "Ukrainian and Russian Interpreter and Translator in Portland and Vancouver | Nadiya Kovch", uk: "Перекладачка української, російської та англійської в Портленді та Венкувері | Nadiya Kovch", ru: "Переводчица украинского, русского и английского в Портленде и Ванкувере | Nadiya Kovch" };
   T = {
-en: { nav_services: "Services", nav_how: "How it works", nav_details: "Details", nav_reviews: "Reviews", nav_news: "News", nav_contact: "Contact",
+en: { nav_home: "Home", nav_services: "Services", nav_how: "How it works", nav_details: "Details", nav_reviews: "Reviews", nav_news: "News", nav_contact: "Contact",
   p_title: "Your privacy", p1t: "Documents stay private", p1d: "Your papers are never shared with anyone else.", p2t: "Confidential conversations", p2d: "Everything I hear and read stays between us.",
   v_title: "A short hello", v_sub: "A short message from me.",
   o_title: "Send a request", o_sub: "Fill in the short form and leave your phone number. I will call you back.", o_name: "Your name", o_contact: "Your phone number", o_lang: "Languages", o_service: "Service", o_date: "Date needed", o_email: "Your email", o_msg: "What exactly do you need? Please describe your case, so I know what to prepare", o_send: "Send request", disc: "Translation of this website is made with the help of AI. News on this site is for information only and is not legal advice. I take no responsibility for decisions made based on it.",
@@ -307,7 +326,7 @@ en: { nav_services: "Services", nav_how: "How it works", nav_details: "Details",
   x_title: "Request a service", x_sub: "Tell me the language, the service and the date. I will reply as soon as I can."
 },
 uk: {
-  nav_services: "Послуги", nav_how: "Як це працює", nav_details: "Деталі", nav_reviews: "Відгуки", nav_news: "Новини", nav_contact: "Контакти",
+  nav_home: "Головна", nav_services: "Послуги", nav_how: "Як це працює", nav_details: "Деталі", nav_reviews: "Відгуки", nav_news: "Новини", nav_contact: "Контакти",
   p_title: "Ваша конфіденційність", p1t: "Документи лишаються приватними", p1d: "Ваші папери нікому не передаються.", p2t: "Конфіденційні розмови", p2d: "Усе, що я чую і читаю, лишається між нами.",
   v_title: "Коротке привітання", v_sub: "Коротке звернення від мене.",
   o_title: "Залишити запит", o_sub: "Заповніть коротку форму і залишіть свій телефон. Я передзвоню вам.", o_name: "Ваше імʼя", o_contact: "Ваш номер телефону", o_lang: "Мови", o_service: "Послуга", o_date: "Потрібна дата", o_email: "Ваш імейл", o_msg: "Що саме вам потрібно? Опишіть суть справи, щоб я знала наперед, до чого готуватись", o_send: "Надіслати запит", disc: "Переклад цього сайту зроблено за допомогою ШІ. Новини на сайті лише для інформації й не є юридичною порадою. Я не несу відповідальності за рішення, ухвалені на їх основі.",
@@ -347,7 +366,7 @@ uk: {
   x_title: "Замовити послугу", x_sub: "Напишіть мову, послугу і дату. Я відповім якнайшвидше."
 },
 ru: {
-  nav_services: "Услуги", nav_how: "Как это работает", nav_details: "Детали", nav_reviews: "Отзывы", nav_news: "Новости", nav_contact: "Контакты",
+  nav_home: "Главная", nav_services: "Услуги", nav_how: "Как это работает", nav_details: "Детали", nav_reviews: "Отзывы", nav_news: "Новости", nav_contact: "Контакты",
   p_title: "Ваша конфиденциальность", p1t: "Документы остаются приватными", p1d: "Ваши бумаги никому не передаются.", p2t: "Конфиденциальные разговоры", p2d: "Всё, что я слышу и читаю, остаётся между нами.",
   v_title: "Короткое приветствие", v_sub: "Короткое обращение от меня.",
   o_title: "Оставить запрос", o_sub: "Заполните короткую форму и оставьте свой телефон. Я перезвоню вам.", o_name: "Ваше имя", o_contact: "Ваш номер телефона", o_lang: "Языки", o_service: "Услуга", o_date: "Нужная дата", o_email: "Ваш имейл", o_msg: "Что именно вам нужно? Опишите суть дела, чтобы я знала заранее, к чему готовиться", o_send: "Отправить запрос", disc: "Перевод этого сайта сделан с помощью ИИ. Новости на сайте только для информации и не являются юридической консультацией. Я не несу ответственности за решения, принятые на их основе.",

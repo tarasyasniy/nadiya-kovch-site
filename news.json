@@ -927,6 +927,10 @@
    [
     "Contacts",
     "index.html#contact"
+   ],
+   [
+    "News",
+    "news.html"
    ]
   ],
   "uk": [
@@ -953,6 +957,10 @@
    [
     "Контакти",
     "index.html#contact"
+   ],
+   [
+    "Новини",
+    "news.html"
    ]
   ],
   "ru": [
@@ -979,6 +987,10 @@
    [
     "Контакты",
     "index.html#contact"
+   ],
+   [
+    "Новости",
+    "news.html"
    ]
   ]
  }
