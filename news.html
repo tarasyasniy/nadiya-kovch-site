@@ -13,20 +13,21 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--b);font
 a{color:var(--ink)}
 header.top{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--rule);z-index:5}
 .w{max-width:1120px;margin:0 auto;padding:0 20px}
-.bar{display:flex;align-items:center;gap:18px;height:72px}
-.bar img{height:50px;display:block;flex:none}
+header.top .w{padding:0 22px}
+.bar{display:flex;align-items:center;gap:18px;height:100px}
+.bar img{height:84px;width:auto;display:block;flex:none}
 .nk-nav{flex:1;display:flex;gap:22px;justify-content:center;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-weight:600;font-size:15px}
 .nk-nav::-webkit-scrollbar{display:none}
 .nk-nav a{text-decoration:none;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent}
 .nk-nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
 .nk-menu-t{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
 .nk-burger{display:none}
-.lang{display:flex;gap:4px;background:var(--tint);border-radius:4px;padding:4px;flex:none}
-.lang button{cursor:pointer;border:0;border-radius:3px;padding:7px 12px;font:700 14px var(--b);background:transparent;color:var(--ink)}
-.lang button[aria-pressed=true]{background:var(--ink);color:#fff}
+.lang{display:flex;gap:4px;background:#DCEEF8;border-radius:999px;padding:4px;flex:none}
+.lang button{cursor:pointer;border:0;border-radius:999px;padding:6px 13px;font:600 13px var(--b);background:transparent;color:var(--ink)}
+.lang button[aria-pressed=true]{background:#1A4F82;color:#fff}
 @media(max-width:859px){
- .bar{flex-wrap:wrap;height:auto;padding:10px 0;gap:8px}
- .bar img{height:44px}
+ header.top .bar{flex-wrap:wrap;height:auto;padding:10px 22px;gap:8px}
+ .bar img{height:56px !important}
  .lang{order:2;margin-left:auto;padding:3px;gap:2px}
  .lang button{padding:5px 9px;font-size:12px}
  .nk-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;order:3;width:42px;height:42px;cursor:pointer}
@@ -127,7 +128,7 @@ p{margin:0 0 20px}
 </style>
 </head>
 <body>
-<header class="top"><div class="w bar"><a href="index.html#top"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com"></a>
+<header class="top"><div class="w bar"><a class="nk-logo" href="index.html#top" style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;padding:0 14px"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:84px;width:auto;display:block"></a>
 <input type="checkbox" id="nk-menu-t" class="nk-menu-t" aria-label="Menu"><label for="nk-menu-t" class="nk-burger" aria-label="Menu"><span></span><span></span><span></span></label>
 <nav class="nk-nav" id="nk-news-nav" aria-label="Main" onclick="if(event.target.tagName==='A')document.getElementById('nk-menu-t').checked=false"></nav>
 <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en">EN</button><button type="button" data-l="uk">UA</button><button type="button" data-l="ru">RU</button></div></div></header>
