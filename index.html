@@ -512,7 +512,9 @@ body{padding-right:0 !important}
 </script>
 <script>
 /* Close the mobile menu after any menu link is tapped, including links to the current page. */
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.nk-nav a');if(a){var c=document.getElementById('nk-menu-t');if(c)c.checked=false;}});
+function nkCloseMenu(){var c=document.getElementById('nk-menu-t');if(c)c.checked=false;}
+document.addEventListener('click',function(e){var p=e.composedPath?e.composedPath():[e.target];for(var i=0;i<p.length;i++){var n=p[i];if(n&&n.tagName==='A'&&n.closest&&n.closest('.nk-nav')){nkCloseMenu();break;}}},true);
+window.addEventListener('hashchange',nkCloseMenu);
 </script>
 </body>
 </html>
