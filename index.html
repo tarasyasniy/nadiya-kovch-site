@@ -57,6 +57,7 @@ a:hover{color:var(--color-accent-600)}
 .nk-nav a:hover{color:var(--color-accent-700)}
 .nk-wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 [id]{scroll-margin-top:110px}
+html{scroll-behavior:smooth}
 .nk-menu-t{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
 .nk-burger{display:none}
 @media(max-width:859px){
@@ -102,7 +103,7 @@ a:hover{color:var(--color-accent-600)}
     <a class="nk-logo" href="#top" style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;padding:0 14px"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:84px;width:auto;display:block"></a>
     <input type="checkbox" id="nk-menu-t" class="nk-menu-t" aria-label="Menu">
     <label for="nk-menu-t" class="nk-burger" aria-label="Menu"><span></span><span></span><span></span></label>
-    <nav class="nk-nav" aria-label="Main" style="gap:26px;font-size:15px" onclick="if(event.target.tagName==='A')document.getElementById('nk-menu-t').checked=false">
+    <nav class="nk-nav" aria-label="Main" style="gap:26px;font-size:15px">
       <a href="#top">{{ t.nav_home }}</a>
       <a href="#services">{{ t.nav_services }}</a>
       <a href="#how">{{ t.nav_how }}</a>
@@ -501,13 +502,17 @@ body{padding-right:0 !important}
   function stop(){if(timer){clearTimeout(timer);timer=null;}}
   function go(){
     var el=document.getElementById(id);
-    if(el){el.scrollIntoView({block:'start'});}
+    if(el){el.scrollIntoView({block:'start',behavior:'instant'});}
     if(++tries<40){timer=setTimeout(go,100);}
   }
   ['wheel','touchstart','keydown','mousedown'].forEach(function(ev){window.addEventListener(ev,stop,{once:true,passive:true});});
   if(document.readyState==='complete'){go();}else{window.addEventListener('load',go);}
   go();
 })();
+</script>
+<script>
+/* Close the mobile menu after any menu link is tapped, including links to the current page. */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.nk-nav a');if(a){var c=document.getElementById('nk-menu-t');if(c)c.checked=false;}});
 </script>
 </body>
 </html>

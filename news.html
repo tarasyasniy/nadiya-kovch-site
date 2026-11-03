@@ -130,10 +130,14 @@ p{margin:0 0 20px}
 <body>
 <header class="top"><div class="w bar"><a class="nk-logo" href="index.html#top" style="display:inline-flex;align-items:center;background:#fff;border-radius:16px;overflow:hidden;padding:0 14px"><img src="assets/nadiya-logo.jpg" alt="Nadiya-ye.com" style="height:84px;width:auto;display:block"></a>
 <input type="checkbox" id="nk-menu-t" class="nk-menu-t" aria-label="Menu"><label for="nk-menu-t" class="nk-burger" aria-label="Menu"><span></span><span></span><span></span></label>
-<nav class="nk-nav" id="nk-news-nav" aria-label="Main" onclick="if(event.target.tagName==='A')document.getElementById('nk-menu-t').checked=false"></nav>
+<nav class="nk-nav" id="nk-news-nav" aria-label="Main"></nav>
 <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en">EN</button><button type="button" data-l="uk">UA</button><button type="button" data-l="ru">RU</button></div></div></header>
 <main><div class="w" id="nk-news-app"></div></main>
 <footer class="w" style="padding:0 20px 36px"><p id="nk-news-foot" style="font-size:12.5px;color:#8A9099;max-width:780px;margin:0 auto;border-top:1px solid #DCDCDC;padding-top:14px"></p></footer>
 <script src="news.js"></script>
+<script>
+/* Close the mobile menu after any menu link is tapped, including links to the current page. */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.nk-nav a');if(a){var c=document.getElementById('nk-menu-t');if(c)c.checked=false;}});
+</script>
 </body>
 </html>
